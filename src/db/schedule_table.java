@@ -24,7 +24,7 @@ public class schedule_table {
                 + "schedule_date Date  not null ,"
                 + "content varchar(100) not null ,"
                 + "trainer_id varchar(50) not null,"
-                + "FOREIGN KEY (`TRAINER_ID`) REFERENCES `trainer`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT );";
+                + "FOREIGN KEY (`TRAINER_ID`) REFERENCES `trainer`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE);";
         try (Connection con = ConnectDB.CreateConnection();
                 PreparedStatement ps = con.prepareStatement(sql)) {
 

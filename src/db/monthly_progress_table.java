@@ -23,9 +23,9 @@ public class monthly_progress_table {
                 + "id varchar(50) primary key ,"
                 + "progress_date Date not null ,"
                 + "member_id varchar(50) not null ,"
-                + "workout_id  varchar(50) not null ,"
-                + "FOREIGN KEY (`MEMBER_ID`) REFERENCES `member`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT ,"
-                + "FOREIGN KEY (`WORKOUT_ID`) REFERENCES `workout`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT   );";
+                + "workout_id  int(50) not null ,"
+                + "FOREIGN KEY (`MEMBER_ID`) REFERENCES `member`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE,"
+                + "FOREIGN KEY (`WORKOUT_ID`) REFERENCES `workout`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE);";
 
         try (Connection con = ConnectDB.CreateConnection();
                 PreparedStatement ps = con.prepareStatement(sql)) {

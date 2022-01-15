@@ -25,7 +25,7 @@ public class CreateDB {
     }
 
     public static void create_db() {
-        String sql = "CREATE DATABASE Nutri_Fit";
+        String sql = "CREATE DATABASE Nutri_Fit_Trainer_Admin";
 
         try (Connection con = createConnection();
                 PreparedStatement ps = con.prepareStatement(sql);) {

@@ -30,9 +30,9 @@ public class invoice_table {
                 + "member_id  varchar(50) not null ,  "
                 + " membership_id  varchar(50) not null,"
                 + "admin_id  varchar(50)  not null ,"
-                + " FOREIGN KEY (`MEMBER_ID`) REFERENCES `member`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT       ,"
-                + " FOREIGN KEY (`MEMBERSHIP_ID`) REFERENCES `membership`(`membership_id`) ON DELETE RESTRICT ON UPDATE RESTRICT,"
-                + "FOREIGN KEY (`ADMIN_ID`) REFERENCES `admin`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT         );";
+                + " FOREIGN KEY (`MEMBER_ID`) REFERENCES `member`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE,"
+                + " FOREIGN KEY (`MEMBERSHIP_ID`) REFERENCES `membership`(`membership_id`)  ON UPDATE CASCADE ON DELETE CASCADE,"
+                + "FOREIGN KEY (`ADMIN_ID`) REFERENCES `admin`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE);";
 
         try (Connection con = ConnectDB.CreateConnection();
                 PreparedStatement ps = con.prepareStatement(sql)) {

@@ -36,8 +36,8 @@ public class DailyAttendancetable {
                 + "note varchar(50),"
                 + "trainer_id varchar(50) not null,"
                 + "attendance_id int not null,"
-                + "FOREIGN KEY (`TRAINER_ID`) REFERENCES `trainer`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT  ,"
-                + "FOREIGN KEY (`ATTENDANCE_ID`) REFERENCES `attendance`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT ,"
+                + "FOREIGN KEY (`TRAINER_ID`) REFERENCES `trainer`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE,"
+                + "FOREIGN KEY (`ATTENDANCE_ID`) REFERENCES `attendance`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE,"
                 + "UNIQUE( `trainer_id`, `attendance_id`)   );";
 
         try (Connection con = ConnectDB.CreateConnection();

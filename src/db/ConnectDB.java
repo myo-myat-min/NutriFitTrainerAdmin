@@ -19,7 +19,7 @@ import javafx.scene.control.ButtonType;
  */
 public class ConnectDB {
 
-    private static final String url = "jdbc:mysql://localhost/Nutri_Fit";
+    private static final String url = "jdbc:mysql://localhost/Nutri_Fit_Trainer_Admin";
     private static final String username = "root";
     private static final String password = "";
 

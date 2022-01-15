@@ -22,7 +22,7 @@ public class workout_table {
     public static void create_table() {
 
         String sql = "Create table workout("
-                + "id int(50) primary key autoincrement ,"
+                + "id int(50) primary key auto_increment ,"
                 + "name varchar(50) not null ,"
                 + "video varchar(60) not null ,"
                 + "burnt_calorie float not null , "
@@ -30,7 +30,7 @@ public class workout_table {
                 + "effected_muscle varchar(40) ,"
                 + "trainer_id  varchar(50) not null ,"
                 + "image longblob ,"
-                + "FOREIGN KEY (`TRAINER_ID`) REFERENCES `trainer`(`id`) ON DELETE RESTRICT ON UPDATE RESTRICT )";
+                + "FOREIGN KEY (`TRAINER_ID`) REFERENCES `trainer`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE)";
         try (Connection con = ConnectDB.CreateConnection();
                 PreparedStatement ps = con.prepareStatement(sql)) {
 
