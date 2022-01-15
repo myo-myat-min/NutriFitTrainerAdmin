@@ -7,10 +7,6 @@ package db;
 
 import java.time.LocalDate;
 
-/**
- *
- * @author Soe min hein
- */
 public class attendance {
     private int id;
     private LocalDate attendance_date;

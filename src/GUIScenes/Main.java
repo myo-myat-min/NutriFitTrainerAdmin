@@ -70,7 +70,7 @@ public class Main extends Application {
                             os.flush();
                             System.out.println("Done.");
                             sock.close();
-
+                            bis.close();
                         } catch (IOException ex) {
 
                         }

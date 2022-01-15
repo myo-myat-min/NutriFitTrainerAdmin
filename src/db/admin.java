@@ -5,10 +5,6 @@
  */
 package db;
 
-/**
- *
- * @author Soe min hein
- */
 public class admin {
 
     private String id;
