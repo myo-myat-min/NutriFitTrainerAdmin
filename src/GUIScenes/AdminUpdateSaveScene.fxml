@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.AdminUpdateSaveController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="568.0" layoutY="435.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="277.0" layoutX="693.0" layoutY="498.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="277.0" layoutX="847.0" layoutY="335.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="347.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="277.0" layoutX="1075.0" layoutY="484.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="229.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="277.0" layoutX="1122.0" layoutY="147.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="278.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="258.0" layoutX="916.0" layoutY="-63.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="278.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="226.0" layoutX="541.0" layoutY="-19.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="278.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="358.0" layoutX="541.0" layoutY="116.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="120.0" />
+      <Circle fx:id="nameCircle" fill="RED" layoutX="1098.0" layoutY="210.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="1092.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Circle fx:id="emailCircle" fill="RED" layoutX="1098.0" layoutY="288.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="1092.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Circle fx:id="phoneCircle" fill="RED" layoutX="1098.0" layoutY="360.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="1092.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="idWatcher" layoutX="1122.0" layoutY="64.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="99.99999403953552" />
+      <Rectangle fx:id="welcomeTemplate" arcHeight="5.0" arcWidth="5.0" fill="#ffbb00" height="789.0" layoutX="-9.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+      <ImageView fitHeight="297.0" fitWidth="425.0" layoutX="90.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/20210202_133251.jpg" />
+         </image>
+      </ImageView>
+      <Text fx:id="txtWelcome" fill="WHITE" layoutX="185.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="W  E  L  C  O  M  E   T  O">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtNutriFit" fill="WHITE" layoutX="227.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NutriFit">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <Circle fx:id="completeCircName" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircEmail" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircPhone" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="731.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Rectangle>
+      <JFXTextField fx:id="trainerName" editable="false" focusColor="BLACK" labelFloat="true" layoutX="861.0" layoutY="189.0" onAction="#memberAction" prefHeight="37.0" prefWidth="250.0" promptText="Admin Name" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Text fx:id="titleTrainerSignUp" layoutX="822.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Admin Data" textAlignment="CENTER" wrappingWidth="317.3603515625">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="signUp" buttonType="RAISED" layoutX="1008.0" layoutY="444.0" onMousePressed="#signUpPressedAction" onMouseReleased="#signUpReleasedAction" prefHeight="40.0" prefWidth="100.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Text fx:id="emptyNoti" fill="RED" layoutX="909.0" layoutY="424.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Empty fields are not allowed" textAlignment="CENTER" wrappingWidth="198.3603364378214">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="email" editable="false" focusColor="BLACK" labelFloat="true" layoutX="861.0" layoutY="267.0" onAction="#emailAction" prefHeight="37.0" prefWidth="250.0" promptText="Email" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Text fx:id="invalidName" fill="RED" layoutX="1000.0" layoutY="176.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid name" textAlignment="CENTER" wrappingWidth="107.99999535083771">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="invalidEmail" fill="RED" layoutX="1000.0" layoutY="253.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid email" textAlignment="CENTER" wrappingWidth="107.99999535083771">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="phone" editable="false" focusColor="BLACK" labelFloat="true" layoutX="861.0" layoutY="341.0" prefHeight="37.0" prefWidth="250.0" promptText="Phone" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Text fx:id="invalidPhone" fill="RED" layoutX="1000.0" layoutY="330.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid phone" textAlignment="CENTER" wrappingWidth="107.99999535083771">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <JFXRadioButton fx:id="onJob" layoutX="848.0" layoutY="414.0" prefHeight="27.0" prefWidth="66.0" selected="true" text="On Job" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="jobStatus" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="offJob" layoutX="847.0" layoutY="452.0" prefHeight="27.0" prefWidth="99.0" text="Off Job" textAlignment="CENTER" toggleGroup="$jobStatus">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <SVGPath fx:id="backArrowShape" content="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm28.9-143.6L209.4 288H392c13.3 0 24-10.7 24-24v-16c0-13.3-10.7-24-24-24H209.4l75.5-72.4c9.7-9.3 9.9-24.8.4-34.3l-11-10.9c-9.4-9.4-24.6-9.4-33.9 0L107.7 239c-9.4 9.4-9.4 24.6 0 33.9l132.7 132.7c9.4 9.4 24.6 9.4 33.9 0l11-10.9c9.5-9.5 9.3-25-.4-34.3z" fill="WHITE" layoutX="-217.0" layoutY="-195.0" onMouseEntered="#backArrowMouseEnteredAction" onMouseExited="#backArrowMouseExitedAction" onMousePressed="#backArrowMousePressedAction" onMouseReleased="#backArrowMouseReleasedAction" scaleX="0.08" scaleY="0.08">
+         <effect>
+            <DropShadow color="#8a8888" height="83.02" offsetX="10.0" offsetY="10.0" radius="47.6825" width="109.71" />
+         </effect>
+      </SVGPath>
+   </children>
+</AnchorPane>

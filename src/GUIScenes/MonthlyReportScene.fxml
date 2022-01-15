@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.MonthlyReportController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="377.0" layoutX="238.0" layoutY="-25.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="584.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="162.0" layoutX="342.0" layoutY="-21.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="277.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="221.0" layoutX="-10.0" layoutY="-14.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="381.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="377.0" layoutX="-112.0" layoutY="100.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="584.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="318.0" layoutX="-112.0" layoutY="270.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="419.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="342.0" layoutX="575.0" layoutY="287.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="277.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="377.0" layoutX="121.0" layoutY="446.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="545.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="291.0" layoutX="514.0" layoutY="531.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="328.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="190.0" layoutX="1228.0" layoutY="471.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="226.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="190.0" layoutX="826.0" layoutY="632.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="481.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="246.0" layoutX="1127.0" layoutY="279.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="328.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="390.0" layoutX="761.0" layoutY="94.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="419.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="246.0" layoutX="1028.0" layoutY="70.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="295.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="246.0" layoutX="949.0" layoutY="-43.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="295.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="221.0" layoutX="-113.0" layoutY="210.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="226.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="205.0" layoutX="326.0" layoutY="622.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="226.0" />
+      <Circle fx:id="completeCircFineDay" fill="RED" layoutX="472.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircFineMinute" fill="RED" layoutX="472.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="433.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Rectangle>
+      <Text fx:id="titleMonthlyReport" layoutX="576.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Report" wrappingWidth="214.3603515625">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Pane fx:id="lineGraphPane" layoutX="166.0" layoutY="148.0" prefHeight="403.0" prefWidth="470.0" />
+      <JFXButton fx:id="insertDataButton" buttonType="RAISED" layoutX="675.0" layoutY="167.0" onMousePressed="#insertPressedAction" onMouseReleased="#insertReleasedAction" prefHeight="31.0" prefWidth="97.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Insert" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="trainerMonthlyReportTable" editable="true" layoutX="675.0" layoutY="216.0" prefHeight="350.0" prefWidth="526.0">
+        <columns>
+          <TableColumn fx:id="trainerName" prefWidth="164.0" text="Trainer Name" />
+          <TableColumn fx:id="lateTime" prefWidth="120.0" text="Late Time(Minutes)" />
+            <TableColumn fx:id="leaveDay" prefWidth="120.0" text="Leave Day" />
+            <TableColumn fx:id="fees" prefWidth="120.0" text="Fees" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="88.0" layoutX="770.0" layoutY="573.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="427.0">
+         <effect>
+            <DropShadow color="#8a8888" offsetX="1.0" offsetY="1.0" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="786.0" layoutY="593.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="193.0">
+         <effect>
+            <DropShadow color="#8a8888" height="11.0" offsetX="1.0" offsetY="1.0" radius="5.0" width="11.0" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="986.0" layoutY="593.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="193.0">
+         <effect>
+            <DropShadow color="#8a8888" height="11.0" offsetX="1.0" offsetY="1.0" radius="5.0" width="11.0" />
+         </effect>
+      </Rectangle>
+      <Text fx:id="dateMonthlyReport" layoutX="798.0" layoutY="623.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="168.999990940094">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="numberOfNewMember" layoutX="998.0" layoutY="622.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New Member : 0" wrappingWidth="168.999990940094">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <JFXHamburger fx:id="adminMenu" layoutX="21.0" layoutY="50.0" onMousePressed="#adminMenuMousePressedAction" />
+      <JFXDrawer fx:id="adminDrawer" layoutY="96.0" prefHeight="350.0" prefWidth="180.0" />
+      <JFXDatePicker fx:id="dateForData" defaultColor="BLACK" editable="false" layoutX="990.0" layoutY="119.0" prefHeight="25.0" prefWidth="212.0" promptText="Choose Date" style="-fx-font-size: 15px;" />
+      <Circle fx:id="dateCircle" fill="RED" layoutX="1154.0" layoutY="135.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="1148.0" layoutY="141.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="emptyNoti" fill="RED" layoutX="794.0" layoutY="188.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Empty fields are not allowed" textAlignment="CENTER" wrappingWidth="211.99998382478952">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="clearButton" buttonType="RAISED" layoutX="677.0" layoutY="590.0" onMousePressed="#clearPressedAction" prefHeight="31.0" prefWidth="73.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="printButton" buttonType="RAISED" layoutX="677.0" layoutY="628.0" onMousePressed="#printPressedAction" onMouseReleased="#printReleasedAction" prefHeight="31.0" prefWidth="73.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Print" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Circle fx:id="fineDayCircle" fill="RED" layoutX="959.0" layoutY="137.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="953.0" layoutY="143.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Circle fx:id="fineMinuteCircle" fill="RED" layoutX="798.0" layoutY="136.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="792.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="txtfieldFinePerMinute" focusColor="BLACK" labelFloat="true" layoutX="675.0" layoutY="114.0" onAction="#finePerMinuteAction" prefHeight="37.0" prefWidth="134.0" promptText="Fine per minute" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtfieldFinePerDay" focusColor="BLACK" labelFloat="true" layoutX="833.0" layoutY="114.0" prefHeight="37.0" prefWidth="134.0" promptText="Fine per day" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Text fx:id="invalidFineMinute" fill="RED" layoutX="771.0" layoutY="104.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid fine" textAlignment="CENTER" wrappingWidth="53.99999890476465">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="invalidFineDay" fill="RED" layoutX="922.0" layoutY="104.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid fine" textAlignment="CENTER" wrappingWidth="53.999999444931746">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

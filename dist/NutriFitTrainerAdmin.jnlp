@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="NutriFitTrainerAdmin.jnlp">
+  <information>
+    <title>NutriFitTrainerAdmin</title>
+    <vendor>ACER</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="NutriFitTrainerAdmin.jar" size="431121" download="eager" />
+    <jar href="lib\jfoenix-8.0.2.jar" size="2442326" download="eager" />
+    <jar href="lib\mail.jar" size="666983" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.18.jar" size="789885" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="NutriFitTrainerAdmin" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="GUIScenes.Main"  name="NutriFitTrainerAdmin" />
+  <update check="always"/>
+</jnlp>

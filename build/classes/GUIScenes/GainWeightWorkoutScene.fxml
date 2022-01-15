@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="732.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.GainWeightWorkoutController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="162.0" layoutX="362.0" layoutY="-1.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="277.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="260.0" layoutX="-20.0" layoutY="-33.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="411.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="429.0" layoutX="-92.0" layoutY="68.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="584.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="318.0" layoutX="-92.0" layoutY="290.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="419.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="377.0" layoutX="206.0" layoutY="466.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="480.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="190.0" layoutX="1248.0" layoutY="491.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="226.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="190.0" layoutX="756.0" layoutY="652.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="571.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="362.0" layoutX="689.0" layoutY="142.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="489.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="237.0" layoutX="969.0" layoutY="-23.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="295.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="291.0" layoutX="-93.0" layoutY="160.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="270.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="342.0" layoutX="595.0" layoutY="307.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="211.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="205.0" layoutX="346.0" layoutY="642.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="226.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="291.0" layoutX="534.0" layoutY="551.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="328.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="260.0" layoutX="1078.0" layoutY="285.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="397.0" />
+      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="433.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Rectangle>
+      <Text fx:id="titleRecordTrainerAtt" layoutX="460.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gain Weight" textAlignment="CENTER" wrappingWidth="445.3603515625">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <ScrollPane fx:id="scrollPane" layoutX="123.0" layoutY="156.0" prefHeight="482.0" prefWidth="1120.0" style="-fx-background-color: white; -fx-border-width: 0px;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+        </content>
+      </ScrollPane>
+      <SVGPath fx:id="backArrowShape" content="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm28.9-143.6L209.4 288H392c13.3 0 24-10.7 24-24v-16c0-13.3-10.7-24-24-24H209.4l75.5-72.4c9.7-9.3 9.9-24.8.4-34.3l-11-10.9c-9.4-9.4-24.6-9.4-33.9 0L107.7 239c-9.4 9.4-9.4 24.6 0 33.9l132.7 132.7c9.4 9.4 24.6 9.4 33.9 0l11-10.9c9.5-9.5 9.3-25-.4-34.3z" fill="WHITE" layoutX="-217.0" layoutY="-195.0" onMouseEntered="#backArrowMouseEnteredAction" onMouseExited="#backArrowMouseExitedAction" onMousePressed="#backArrowMousePressedAction" onMouseReleased="#backArrowMouseReleasedAction" scaleX="0.08" scaleY="0.08">
+         <effect>
+            <DropShadow color="#8a8888" height="83.02" offsetX="10.0" offsetY="10.0" radius="47.6825" width="109.71" />
+         </effect>
+      </SVGPath>
+   </children>
+</AnchorPane>

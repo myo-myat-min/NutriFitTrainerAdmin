@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="732.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.TrainerAttController">
+   <children>
+      <AnchorPane layoutX="156.0" layoutY="73.0" prefHeight="200.0" prefWidth="200.0" />
+      <AnchorPane prefHeight="789.0" prefWidth="600.0" style="-fx-background-color: ffbb00;" />
+      <TableView fx:id="attTable" editable="true" layoutX="690.0" layoutY="162.0" prefHeight="465.0" prefWidth="582.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="111.0" text="Id" />
+            <TableColumn fx:id="trainerName" prefWidth="164.0" text="Trainer Name" />
+          <TableColumn fx:id="att" prefWidth="90.0" text="Attendance" />
+            <TableColumn fx:id="lateHour" prefWidth="95.0" text="Arrival Time" />
+            <TableColumn fx:id="reason" prefWidth="120.0" text="Note" />
+        </columns>
+      </TableView>
+      <Text fx:id="txtWelcome" fill="WHITE" layoutX="185.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="W  E  L  C  O  M  E   T  O">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtNutriFit" fill="WHITE" layoutX="227.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NutriFit">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <JFXDrawer fx:id="adminDrawer" layoutY="96.0" prefHeight="350.0" prefWidth="180.0" />
+      <JFXHamburger fx:id="adminMenu" layoutX="21.0" layoutY="50.0" />
+      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="731.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Rectangle>
+      <Text fx:id="titleRecordTrainerAtt" layoutX="800.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Record Trainer Attendance" wrappingWidth="362.3603515625">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="recordAttButton" buttonType="RAISED" layoutX="1175.0" layoutY="644.0" onMousePressed="#recordAttPressedAction" prefHeight="31.0" prefWidth="97.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Record" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Text fx:id="currentDate" layoutX="1132.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" textAlignment="RIGHT" wrappingWidth="139.08839082717896">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

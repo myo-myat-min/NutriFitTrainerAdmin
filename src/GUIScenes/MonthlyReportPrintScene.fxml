@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="595.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.MonthlyReportPrintController">
+   <children>
+      <TableView fx:id="TMRtable" editable="true" layoutX="36.0" layoutY="446.0" prefHeight="226.0" prefWidth="525.0">
+         <columns>
+            <TableColumn fx:id="tName" prefWidth="164.0" text="Trainer Name" />
+            <TableColumn fx:id="lTime" prefWidth="120.0" text="Late Time(Hour)" />
+            <TableColumn fx:id="lDay" prefWidth="120.0" text="Leave Day" />
+            <TableColumn fx:id="fee" prefWidth="119.0" text="Fees" />
+         </columns>
+      </TableView>
+      <Pane fx:id="linegraph" layoutX="63.0" layoutY="143.0" prefHeight="289.0" prefWidth="470.0" />
+      <JFXDatePicker fx:id="dateforData" defaultColor="BLACK" editable="false" layoutX="336.0" layoutY="99.0" prefHeight="25.0" prefWidth="212.0" promptText="Choose Date" style="-fx-font-size: 15px;" />
+      <JFXButton fx:id="printButton" buttonType="RAISED" layoutX="226.0" layoutY="100.0" onMousePressed="#printPressedAction" prefHeight="31.0" prefWidth="97.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Print" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <Circle fx:id="dateCircle" fill="RED" layoutX="497.0" layoutY="115.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="491.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Text fx:id="emptyNoti" fill="RED" layoutX="336.0" layoutY="94.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Empty field is not allowed" textAlignment="CENTER" wrappingWidth="180.00000143051147">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="48.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Rectangle>
+      <Text fx:id="titleMonthlyReport" layoutX="191.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monthly Report" wrappingWidth="214.3603515625">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="clearButton" buttonType="RAISED" layoutX="112.0" layoutY="100.0" onMousePressed="#clearPressedAction" prefHeight="31.0" prefWidth="97.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="combobox" prefHeight="732.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.InvoiceController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbb00" height="789.0" layoutX="-15.0" layoutY="-21.0" stroke="#fcf8f8" strokeType="INSIDE" width="600.0" />
+      <ImageView fitHeight="297.0" fitWidth="425.0" layoutX="90.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/20210202_133251.jpg" />
+         </image>
+      </ImageView>
+      <Text fx:id="txtWelcome" fill="WHITE" layoutX="185.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="W  E  L  C  O  M  E   T  O">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtNutriFit" fill="WHITE" layoutX="227.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NutriFit">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <JFXHamburger fx:id="adminMenu" layoutX="21.0" layoutY="50.0" onMousePressed="#adminMenuMousePressedAction" />
+      <JFXDrawer fx:id="adminDrawer" layoutY="96.0" prefHeight="350.0" prefWidth="180.0" />
+      <Circle fx:id="completeCircName" fill="RED" layoutX="767.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="731.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Rectangle>
+      <Text fx:id="titleInvoice" layoutX="932.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invoice" wrappingWidth="97.3603515625">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="275.0" layoutX="708.0" layoutY="154.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="546.0">
+         <effect>
+            <DropShadow color="#8a8888" offsetX="1.0" offsetY="1.0" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="1017.0" layoutY="349.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0">
+         <effect>
+            <DropShadow color="#8a8888" height="11.0" offsetX="1.0" offsetY="1.0" radius="5.0" width="11.0" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="91.0" layoutX="1017.0" layoutY="172.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0">
+         <effect>
+            <DropShadow color="#8a8888" height="11.0" offsetX="1.0" offsetY="1.0" radius="5.0" width="11.0" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="74.0" layoutX="1017.0" layoutY="266.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0">
+         <effect>
+            <DropShadow color="#8a8888" height="11.0" offsetX="1.0" offsetY="1.0" radius="5.0" width="11.0" />
+         </effect>
+      </Rectangle>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="738.0" layoutY="349.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="272.0">
+         <effect>
+            <DropShadow color="#8a8888" height="11.0" offsetX="1.0" offsetY="1.0" radius="5.0" width="11.0" />
+         </effect>
+      </Rectangle>
+      <Text fx:id="dateInvoice" layoutX="753.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="168.999990940094">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="memberName" editable="false" focusColor="BLACK" labelFloat="true" layoutX="1025.0" layoutY="200.0" promptText="Member Name" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXComboBox fx:id="packageChoice" focusColor="BLACK" labelFloat="true" layoutX="1025.0" layoutY="291.0" prefHeight="25.0" prefWidth="169.0" promptText="Package Choice" style="-fx-font-size: 15px;" unFocusColor="BLACK" />
+      <Text fx:id="packageFees" layoutX="1025.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fees" wrappingWidth="168.999990940094">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="171.0" layoutX="738.0" layoutY="171.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="272.0">
+         <effect>
+            <DropShadow color="#8a8888" height="11.0" offsetX="1.0" offsetY="1.0" radius="5.0" width="11.0" />
+         </effect>
+      </Rectangle>
+      <Text fx:id="gymPhone" layoutX="752.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone : 09955598481" wrappingWidth="194.0">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="gymAddress" layoutX="753.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address :" wrappingWidth="243.99999578297138">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="printButton" buttonType="RAISED" layoutX="1157.0" layoutY="446.0" onMouseReleased="#printReleasedAction" prefHeight="40.0" prefWidth="97.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Print" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+    </children>
+</AnchorPane>

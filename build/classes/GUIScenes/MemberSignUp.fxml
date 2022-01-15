@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXDrawer?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.MemberSignUpController">
+   <children>
+      <Circle fx:id="nameCircle" fill="RED" layoutX="866.0" layoutY="154.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="860.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Circle fx:id="emailCircle" fill="RED" layoutX="866.0" layoutY="232.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="860.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+<!--      <Circle fx:id="emailCircle" fill="RED" layoutX="866.0" layoutY="230.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="860.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>-->
+      <Circle fx:id="nrcCircle" fill="RED" layoutX="866.0" layoutY="303.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="860.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Circle fx:id="dobCircle" fill="RED" layoutX="1085.0" layoutY="156.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="1079.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Circle fx:id="heightCircle" fill="RED" layoutX="1311.0" layoutY="228.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="1305.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Circle fx:id="weightCircle" fill="RED" layoutX="1311.0" layoutY="304.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="1305.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Rectangle fx:id="welcomeTemplate" arcHeight="5.0" arcWidth="5.0" fill="#ffbb00" height="789.0" layoutX="-9.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+      <ImageView fitHeight="297.0" fitWidth="425.0" layoutX="90.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/20210202_133251.jpg" />
+         </image>
+      </ImageView>
+      <Text fx:id="txtWelcome" fill="WHITE" layoutX="185.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="W  E  L  C  O  M  E   T  O">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtNutriFit" fill="WHITE" layoutX="227.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NutriFit">
+         <font>
+            <Font name="System Bold" size="35.0" />
+         </font>
+      </Text>
+      <Circle fx:id="completeCircName" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircEmail" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircPhone" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircNRC" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircHeight" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircWeight" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircDOB" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="731.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
+         </effect>
+      </Rectangle>
+      <JFXTextField fx:id="memberName" focusColor="BLACK" labelFloat="true" layoutX="629.0" layoutY="133.0" onAction="#memberAction" prefHeight="37.0" prefWidth="250.0" promptText="Member Name" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="nrc" focusColor="BLACK" labelFloat="true" layoutX="628.0" layoutY="287.0" onAction="#nrcAction" prefHeight="37.0" prefWidth="250.0" promptText="NRC" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="phone" focusColor="BLACK" labelFloat="true" layoutX="628.0" layoutY="362.0" onAction="#phoneAction" prefHeight="37.0" prefWidth="250.0" promptText="Phone" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXRadioButton fx:id="male" layoutX="1157.0" layoutY="138.0" prefHeight="27.0" prefWidth="66.0" selected="true" text="Male" textAlignment="CENTER">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="gender" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="female" layoutX="1231.0" layoutY="138.0" prefHeight="27.0" prefWidth="92.0" text="Female" textAlignment="CENTER" toggleGroup="$gender">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXRadioButton>
+      <JFXDatePicker fx:id="dob" defaultColor="BLACK" editable="false" layoutX="924.0" layoutY="138.0" prefHeight="25.0" prefWidth="212.0" promptText="Date of Birth" style="-fx-font-size: 15px;" />
+      <JFXSlider fx:id="sliHeight" layoutX="924.0" layoutY="238.0" majorTickUnit="50.0" max="450.0" min="1.0" onMouseMoved="#heightScrollMouseMovedAction" prefHeight="27.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="1.0" />
+      <JFXTextField fx:id="height" focusColor="BLACK" labelFloat="true" layoutX="1212.0" layoutY="208.0" onMousePressed="#heightMousePressedAction" prefHeight="37.0" prefWidth="108.0" promptText="Height(cm)" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXSlider fx:id="sliWeight" layoutX="924.0" layoutY="313.0" majorTickUnit="50.0" max="450.0" min="1.0" onMouseMoved="#weightScrollMouseMovedAction" prefHeight="27.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="1.0" />
+      <JFXTextField fx:id="weight" focusColor="BLACK" labelFloat="true" layoutX="1212.0" layoutY="283.0" onMousePressed="#weightMousePressedAction" prefHeight="37.0" prefWidth="108.0" promptText="Weight(kg)" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextArea fx:id="medicalData" focusColor="BLACK" labelFloat="true" layoutX="924.0" layoutY="367.0" prefHeight="98.0" prefWidth="397.0" promptText="Medical data">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextArea>
+      <Text fx:id="title" layoutX="866.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Sign Up" wrappingWidth="229.3603515625">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="signUp" buttonType="RAISED" layoutX="1101.0" layoutY="620.0" onMousePressed="#signUpPressedAction" onMouseReleased="#signUpReleasedAction" prefHeight="40.0" prefWidth="229.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Sign Up" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </JFXButton>
+      <JFXHamburger fx:id="adminMenu" layoutX="21.0" layoutY="50.0" />
+      <Text fx:id="emptyNoti" fill="RED" layoutX="1101.0" layoutY="582.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Empty fields are not allowed except medical data" textAlignment="CENTER" wrappingWidth="229.3603364378214">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Circle fx:id="phoneCircle" fill="RED" layoutX="866.0" layoutY="379.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="860.0" layoutY="385.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <JFXTextField fx:id="email" focusColor="BLACK" labelFloat="true" layoutX="629.0" layoutY="211.0" onAction="#emailAction" prefHeight="37.0" prefWidth="250.0" promptText="Email" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
+      <Circle fx:id="addressCircle" fill="RED" layoutX="866.0" layoutY="433.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="860.0" layoutY="439.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <JFXTextArea fx:id="address" focusColor="BLACK" labelFloat="true" layoutX="630.0" layoutY="425.0" prefHeight="117.0" prefWidth="250.0" promptText="Address">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextArea>
+      <Text fx:id="invalidName" fill="RED" layoutX="771.0" layoutY="128.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid name" textAlignment="CENTER" wrappingWidth="107.99999535083771">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="invalidEmail" fill="RED" layoutX="771.0" layoutY="205.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid email" textAlignment="CENTER" wrappingWidth="107.99999535083771">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="invalidPhone" fill="RED" layoutX="770.0" layoutY="357.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid phone" textAlignment="CENTER" wrappingWidth="107.99999535083771">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="invalidNrc" fill="RED" layoutX="770.0" layoutY="280.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid NRC" textAlignment="CENTER" wrappingWidth="107.99999535083771">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="invalidWeight" fill="RED" layoutX="1270.0" layoutY="268.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid weight" textAlignment="CENTER" wrappingWidth="57.00001958012581">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <Text fx:id="invalidHeight" fill="RED" layoutX="1272.0" layoutY="190.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid height" textAlignment="CENTER" wrappingWidth="57.00001958012581">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <JFXDrawer fx:id="adminDrawer" layoutY="96.0" prefHeight="350.0" prefWidth="180.0" />
+      <Text fx:id="invalidDOB" fill="RED" layoutX="924.0" layoutY="113.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age &lt;14 not allowed" textAlignment="CENTER" wrappingWidth="65.00002002716064">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font>
+      </Text>
+      <JFXComboBox fx:id="cboPackage" focusColor="BLACK" labelFloat="true" layoutX="924.0" layoutY="515.0" prefHeight="25.0" prefWidth="166.0" promptText="Choose Package" style="-fx-font-size: 15px;" unFocusColor="BLACK" visibleRowCount="5" />
+   </children>
+</AnchorPane>
