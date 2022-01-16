@@ -366,7 +366,7 @@ public class CreateInvoiceController implements Initializable {
                         new Alert(Alert.AlertType.INFORMATION, "Change data are recorded.", ButtonType.OK).showAndWait();
                         try {
                             Parent trainerSignUpScene = FXMLLoader.load(getClass().getResource("InvoicePrintScene.fxml"));
-                            Scene scene = new Scene(trainerSignUpScene, 1360, 700);
+                            Scene scene = new Scene(trainerSignUpScene);
                             Stage window = new Stage();
                             window.setWidth(495);
                             window.setHeight(690);

@@ -89,7 +89,7 @@ public class MainWorkoutController implements Initializable {
     void handleButtonAction(ActionEvent event) {
         try {
             Parent memberSignUpScene = FXMLLoader.load(getClass().getResource("LooseWeightWorkoutScene.fxml"));
-            Scene scene = new Scene(memberSignUpScene, 1360, 700);
+            Scene scene = new Scene(memberSignUpScene);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setResizable(false);
             window.setScene(scene);
@@ -103,7 +103,7 @@ public class MainWorkoutController implements Initializable {
     void handleButtonAction1(ActionEvent event) {
         try {
             Parent memberSignUpScene = FXMLLoader.load(getClass().getResource("AllWorkoutScene.fxml"));
-            Scene scene = new Scene(memberSignUpScene, 1360, 700);
+            Scene scene = new Scene(memberSignUpScene);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setResizable(false);
             window.setScene(scene);
@@ -117,7 +117,7 @@ public class MainWorkoutController implements Initializable {
     void handleButtonAction3(ActionEvent event) {
         try {
             Parent memberSignUpScene = FXMLLoader.load(getClass().getResource("GainWeightWorkoutScene.fxml"));
-            Scene scene = new Scene(memberSignUpScene, 1360, 700);
+            Scene scene = new Scene(memberSignUpScene);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setResizable(false);
             window.setScene(scene);
@@ -131,7 +131,7 @@ public class MainWorkoutController implements Initializable {
     void handleButtonAction4(ActionEvent event) {
         try {
             Parent memberSignUpScene = FXMLLoader.load(getClass().getResource("GetFitterWorkoutScene.fxml"));
-            Scene scene = new Scene(memberSignUpScene, 1360, 700);
+            Scene scene = new Scene(memberSignUpScene);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setResizable(false);
             window.setScene(scene);

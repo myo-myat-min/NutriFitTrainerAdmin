@@ -49,7 +49,7 @@ public class TrainerAdminSignInController extends Stage implements Initializable
     void adminSignInButtonAction(ActionEvent event) {
         try {
             Parent memberSignUpScene = FXMLLoader.load(getClass().getResource("AdminSignInScene.fxml"));
-            Scene scene = new Scene(memberSignUpScene, 1360, 700);
+            Scene scene = new Scene(memberSignUpScene);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setResizable(false);
             window.setScene(scene);
@@ -63,7 +63,7 @@ public class TrainerAdminSignInController extends Stage implements Initializable
     void trainerSignInButtonAction(ActionEvent event) {
         try {
             Parent memberSignUpScene = FXMLLoader.load(getClass().getResource("TrainerSignInScene.fxml"));
-            Scene scene = new Scene(memberSignUpScene, 1360, 700);
+            Scene scene = new Scene(memberSignUpScene);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setResizable(false);
             window.setScene(scene);

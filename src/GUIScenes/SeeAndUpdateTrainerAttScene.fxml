@@ -14,7 +14,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="732.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.SeeAndUpdateTrainerAttController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1220.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.SeeAndUpdateTrainerAttController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="318.0" layoutX="248.0" layoutY="-15.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="584.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="162.0" layoutX="352.0" layoutY="-11.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="277.0" />

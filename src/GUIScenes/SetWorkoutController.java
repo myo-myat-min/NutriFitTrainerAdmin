@@ -408,7 +408,7 @@ public class SetWorkoutController implements Initializable {
 
                         new Alert(AlertType.INFORMATION, "Data are uploaded", ButtonType.OK).showAndWait();
                         Parent trainerSignUpScene = FXMLLoader.load(getClass().getResource("SetWorkoutScene.fxml"));
-                        Scene scene = new Scene(trainerSignUpScene, 1360, 700);
+                        Scene scene = new Scene(trainerSignUpScene);
 
                         window.setResizable(false);
                         window.setScene(scene);

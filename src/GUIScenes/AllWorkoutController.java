@@ -96,7 +96,7 @@ public class AllWorkoutController implements Initializable {
     void backArrowMouseReleasedAction(MouseEvent event) {
         try {
             Parent trainerSignUpScene = FXMLLoader.load(getClass().getResource("MainWorkoutScene.fxml"));
-            Scene scene = new Scene(trainerSignUpScene, 1360, 700);
+            Scene scene = new Scene(trainerSignUpScene);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setResizable(false);
             window.setScene(scene);
@@ -237,7 +237,7 @@ public class AllWorkoutController implements Initializable {
             Parent memberSignUpScene = loader.load();
             ViewSingleWorkoutController vswc = loader.getController();
             vswc.filterForAll("all");
-            Scene scene = new Scene(memberSignUpScene, 1360, 700);
+            Scene scene = new Scene(memberSignUpScene);
 
             Stage window = (Stage) ((Node) a.getSource()).getScene().getWindow();
             window.setResizable(false);

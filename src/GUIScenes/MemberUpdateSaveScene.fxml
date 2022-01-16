@@ -17,94 +17,94 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.MemberUpdateSaveController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1220.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.MemberUpdateSaveController">
    <children>
-      <Circle fx:id="nameCircle" fill="RED" layoutX="866.0" layoutY="154.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Text fill="WHITE" layoutX="860.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
-         <font>
-            <Font name="System Bold" size="21.0" />
-         </font>
-      </Text>
-      <Circle fx:id="emailCircle1" fill="RED" layoutX="860.0" layoutY="232.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Text fill="WHITE" layoutX="854.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
-         <font>
-            <Font name="System Bold" size="21.0" />
-         </font>
-      </Text>
-      <Circle fx:id="emailCircle" fill="RED" layoutX="866.0" layoutY="230.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Text fill="WHITE" layoutX="860.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
-         <font>
-            <Font name="System Bold" size="21.0" />
-         </font>
-      </Text>
-      <Circle fx:id="nrcCircle" fill="RED" layoutX="866.0" layoutY="454.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Text fill="WHITE" layoutX="860.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
-         <font>
-            <Font name="System Bold" size="21.0" />
-         </font>
-      </Text>
-      <Circle fx:id="dobCircle" fill="RED" layoutX="1085.0" layoutY="156.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Text fill="WHITE" layoutX="1079.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
-         <font>
-            <Font name="System Bold" size="21.0" />
-         </font>
-      </Text>
-      <Circle fx:id="heightCircle" fill="RED" layoutX="1311.0" layoutY="228.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Text fill="WHITE" layoutX="1305.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
-         <font>
-            <Font name="System Bold" size="21.0" />
-         </font>
-      </Text>
-      <Circle fx:id="weightCircle" fill="RED" layoutX="1311.0" layoutY="304.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Text fill="WHITE" layoutX="1305.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
-         <font>
-            <Font name="System Bold" size="21.0" />
-         </font>
-      </Text>
-      <Rectangle fx:id="welcomeTemplate" arcHeight="5.0" arcWidth="5.0" fill="#ffbb00" height="789.0" layoutX="-9.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
-      <ImageView fitHeight="297.0" fitWidth="425.0" layoutX="90.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+      <Rectangle fx:id="welcomeTemplate" arcHeight="5.0" arcWidth="5.0" fill="#ffbb00" height="789.0" layoutX="-6.0" layoutY="-9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="492.0" />
+      <ImageView fitHeight="297.0" fitWidth="425.0" layoutX="39.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Resources/20210202_133251.jpg" />
          </image>
       </ImageView>
-      <Text fx:id="txtWelcome" fill="WHITE" layoutX="185.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="W  E  L  C  O  M  E   T  O">
+      <Text fx:id="txtWelcome" fill="WHITE" layoutX="134.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="W  E  L  C  O  M  E   T  O">
          <font>
             <Font size="20.0" />
          </font>
       </Text>
-      <Text fx:id="txtNutriFit" fill="WHITE" layoutX="227.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NutriFit">
+      <Text fx:id="txtNutriFit" fill="WHITE" layoutX="176.0" layoutY="539.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NutriFit">
          <font>
             <Font name="System Bold" size="35.0" />
          </font>
       </Text>
-      <Circle fx:id="completeCircName" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Circle fx:id="completeCircEmail" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Circle fx:id="completeCircPhone" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Circle fx:id="completeCircNRC" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Circle fx:id="completeCircHeight" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Circle fx:id="completeCircWeight" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Circle fx:id="completeCircDOB" fill="RED" layoutX="771.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="731.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+      <Circle fx:id="nameCircle" fill="RED" layoutX="747.0" layoutY="149.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="741.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Circle fx:id="emailCircle1" fill="RED" layoutX="741.0" layoutY="227.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="735.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Circle fx:id="emailCircle" fill="RED" layoutX="747.0" layoutY="225.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="741.0" layoutY="231.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Circle fx:id="nrcCircle" fill="RED" layoutX="747.0" layoutY="449.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="741.0" layoutY="455.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Circle fx:id="dobCircle" fill="RED" layoutX="966.0" layoutY="151.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="960.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Circle fx:id="heightCircle" fill="RED" layoutX="1192.0" layoutY="223.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="1186.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Circle fx:id="weightCircle" fill="RED" layoutX="1192.0" layoutY="299.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="1186.0" layoutY="305.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Text>
+      <Circle fx:id="completeCircName" fill="RED" layoutX="652.0" layoutY="55.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircEmail" fill="RED" layoutX="652.0" layoutY="55.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircPhone" fill="RED" layoutX="652.0" layoutY="55.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircNRC" fill="RED" layoutX="652.0" layoutY="55.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircHeight" fill="RED" layoutX="652.0" layoutY="55.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircWeight" fill="RED" layoutX="652.0" layoutY="55.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Circle fx:id="completeCircDOB" fill="RED" layoutX="652.0" layoutY="55.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="606.0" layoutY="38.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
          <effect>
             <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
          </effect>
       </Rectangle>
-      <JFXTextField fx:id="memberName" focusColor="BLACK" labelFloat="true" layoutX="629.0" layoutY="133.0" onAction="#memberAction" prefHeight="37.0" prefWidth="250.0" promptText="Member Name" unFocusColor="BLACK">
+      <JFXTextField fx:id="memberName" focusColor="BLACK" labelFloat="true" layoutX="510.0" layoutY="128.0" onAction="#memberAction" prefHeight="37.0" prefWidth="250.0" promptText="Member Name" unFocusColor="BLACK">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="nrc" focusColor="BLACK" labelFloat="true" layoutX="629.0" layoutY="289.0" onAction="#nrcAction" prefHeight="37.0" prefWidth="250.0" promptText="NRC" unFocusColor="BLACK">
+      <JFXTextField fx:id="nrc" focusColor="BLACK" labelFloat="true" layoutX="510.0" layoutY="284.0" onAction="#nrcAction" prefHeight="37.0" prefWidth="250.0" promptText="NRC" unFocusColor="BLACK">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="phone" focusColor="BLACK" labelFloat="true" layoutX="629.0" layoutY="367.0" onAction="#phoneAction" prefHeight="37.0" prefWidth="250.0" promptText="Phone" unFocusColor="BLACK">
+      <JFXTextField fx:id="phone" focusColor="BLACK" labelFloat="true" layoutX="510.0" layoutY="362.0" onAction="#phoneAction" prefHeight="37.0" prefWidth="250.0" promptText="Phone" unFocusColor="BLACK">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXRadioButton fx:id="male" layoutX="1157.0" layoutY="138.0" prefHeight="27.0" prefWidth="66.0" selected="true" text="Male" textAlignment="CENTER">
+      <JFXRadioButton fx:id="male" layoutX="1038.0" layoutY="133.0" prefHeight="27.0" prefWidth="66.0" selected="true" text="Male" textAlignment="CENTER">
          <font>
             <Font size="15.0" />
          </font>
@@ -112,102 +112,102 @@
             <ToggleGroup fx:id="gender" />
          </toggleGroup>
       </JFXRadioButton>
-      <JFXRadioButton fx:id="female" layoutX="1231.0" layoutY="138.0" prefHeight="27.0" prefWidth="66.0" text="Female" textAlignment="CENTER" toggleGroup="$gender">
+      <JFXRadioButton fx:id="female" layoutX="1112.0" layoutY="133.0" prefHeight="27.0" prefWidth="66.0" text="Female" textAlignment="CENTER" toggleGroup="$gender">
          <font>
             <Font size="15.0" />
          </font>
       </JFXRadioButton>
-      <JFXDatePicker fx:id="dob" defaultColor="BLACK" editable="false" layoutX="924.0" layoutY="138.0" prefHeight="25.0" prefWidth="212.0" promptText="Date of Birth" style="-fx-font-size: 15px;" />
-      <JFXSlider fx:id="sliHeight" layoutX="924.0" layoutY="238.0" majorTickUnit="50.0" max="450.0" min="1.0" onMouseMoved="#heightScrollMouseMovedAction" prefHeight="27.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="180.0" />
-      <JFXTextField fx:id="height" focusColor="BLACK" labelFloat="true" layoutX="1212.0" layoutY="208.0" onMousePressed="#heightMousePressedAction" prefHeight="37.0" prefWidth="108.0" promptText="Height(cm)" unFocusColor="BLACK">
+      <JFXDatePicker fx:id="dob" defaultColor="BLACK" editable="false" layoutX="805.0" layoutY="133.0" prefHeight="25.0" prefWidth="212.0" promptText="Date of Birth" style="-fx-font-size: 15px;" />
+      <JFXSlider fx:id="sliHeight" layoutX="805.0" layoutY="233.0" majorTickUnit="50.0" max="450.0" min="1.0" onMouseMoved="#heightScrollMouseMovedAction" prefHeight="27.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="180.0" />
+      <JFXTextField fx:id="height" focusColor="BLACK" labelFloat="true" layoutX="1093.0" layoutY="203.0" onMousePressed="#heightMousePressedAction" prefHeight="37.0" prefWidth="108.0" promptText="Height(cm)" unFocusColor="BLACK">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXSlider fx:id="sliWeight" layoutX="924.0" layoutY="313.0" majorTickUnit="50.0" max="450.0" min="1.0" onMouseMoved="#weightScrollMouseMovedAction" prefHeight="27.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="45.0" />
-      <JFXTextField fx:id="weight" focusColor="BLACK" labelFloat="true" layoutX="1212.0" layoutY="283.0" onMousePressed="#weightMousePressedAction" prefHeight="37.0" prefWidth="108.0" promptText="Weight(kg)" unFocusColor="BLACK">
+      <JFXSlider fx:id="sliWeight" layoutX="805.0" layoutY="308.0" majorTickUnit="50.0" max="450.0" min="1.0" onMouseMoved="#weightScrollMouseMovedAction" prefHeight="27.0" prefWidth="250.0" showTickLabels="true" showTickMarks="true" value="45.0" />
+      <JFXTextField fx:id="weight" focusColor="BLACK" labelFloat="true" layoutX="1093.0" layoutY="278.0" onMousePressed="#weightMousePressedAction" prefHeight="37.0" prefWidth="108.0" promptText="Weight(kg)" unFocusColor="BLACK">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextArea fx:id="medicalData" focusColor="BLACK" labelFloat="true" layoutX="924.0" layoutY="445.0" prefHeight="76.0" prefWidth="397.0" promptText="Medical data">
+      <JFXTextArea fx:id="medicalData" focusColor="BLACK" labelFloat="true" layoutX="805.0" layoutY="440.0" prefHeight="76.0" prefWidth="397.0" promptText="Medical data">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextArea>
-      <Text fx:id="titleUpdateMemberData" layoutX="823.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Member Data" textAlignment="CENTER" wrappingWidth="316.3603515625">
+      <Text fx:id="titleUpdateMemberData" layoutX="704.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Update Member Data" textAlignment="CENTER" wrappingWidth="316.3603515625">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <JFXButton fx:id="saveButton" buttonType="RAISED" layoutX="1101.0" layoutY="620.0" onMousePressed="#savePressedAction" onMouseReleased="#saveReleasedAction" prefHeight="40.0" prefWidth="229.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Update" textFill="WHITE">
+      <JFXButton fx:id="saveButton" buttonType="RAISED" layoutX="982.0" layoutY="615.0" onMousePressed="#savePressedAction" onMouseReleased="#saveReleasedAction" prefHeight="40.0" prefWidth="229.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Update" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <Text fx:id="emptyNoti" fill="RED" layoutX="1101.0" layoutY="582.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Empty fields are not allowed except medical data" textAlignment="CENTER" wrappingWidth="229.3603364378214">
+      <Text fx:id="emptyNoti" fill="RED" layoutX="982.0" layoutY="577.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Empty fields are not allowed except medical data" textAlignment="CENTER" wrappingWidth="229.3603364378214">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Circle fx:id="phoneCircle" fill="RED" layoutX="866.0" layoutY="531.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Text fill="WHITE" layoutX="860.0" layoutY="537.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+      <Circle fx:id="phoneCircle" fill="RED" layoutX="747.0" layoutY="526.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="741.0" layoutY="532.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <JFXTextField fx:id="email" focusColor="BLACK" labelFloat="true" layoutX="629.0" layoutY="211.0" onAction="#emailAction" prefHeight="37.0" prefWidth="250.0" promptText="Email" unFocusColor="BLACK">
+      <JFXTextField fx:id="email" focusColor="BLACK" labelFloat="true" layoutX="510.0" layoutY="206.0" onAction="#emailAction" prefHeight="37.0" prefWidth="250.0" promptText="Email" unFocusColor="BLACK">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <Circle fx:id="addressCircle" fill="RED" layoutX="866.0" layoutY="586.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Text fill="WHITE" layoutX="860.0" layoutY="592.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+      <Circle fx:id="addressCircle" fill="RED" layoutX="747.0" layoutY="581.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="741.0" layoutY="587.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <JFXTextArea fx:id="address" focusColor="BLACK" labelFloat="true" layoutX="631.0" layoutY="445.0" prefHeight="76.0" prefWidth="250.0" promptText="Address">
+      <JFXTextArea fx:id="address" focusColor="BLACK" labelFloat="true" layoutX="512.0" layoutY="440.0" prefHeight="76.0" prefWidth="250.0" promptText="Address">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextArea>
-      <Text fx:id="invalidName" fill="RED" layoutX="771.0" layoutY="128.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid name" textAlignment="CENTER" wrappingWidth="107.99999535083771">
+      <Text fx:id="invalidName" fill="RED" layoutX="652.0" layoutY="123.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid name" textAlignment="CENTER" wrappingWidth="107.99999535083771">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="invalidEmail" fill="RED" layoutX="771.0" layoutY="205.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid email" textAlignment="CENTER" wrappingWidth="107.99999535083771">
+      <Text fx:id="invalidEmail" fill="RED" layoutX="652.0" layoutY="200.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid email" textAlignment="CENTER" wrappingWidth="107.99999535083771">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="invalidPhone" fill="RED" layoutX="771.0" layoutY="505.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid phone" textAlignment="CENTER" wrappingWidth="107.99999535083771">
+      <Text fx:id="invalidPhone" fill="RED" layoutX="652.0" layoutY="500.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid phone" textAlignment="CENTER" wrappingWidth="107.99999535083771">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="invalidNrc" fill="RED" layoutX="771.0" layoutY="428.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid NRC" textAlignment="CENTER" wrappingWidth="107.99999535083771">
+      <Text fx:id="invalidNrc" fill="RED" layoutX="652.0" layoutY="423.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid NRC" textAlignment="CENTER" wrappingWidth="107.99999535083771">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="invalidWeight" fill="RED" layoutX="1270.0" layoutY="268.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid weight" textAlignment="CENTER" wrappingWidth="57.00001958012581">
+      <Text fx:id="invalidWeight" fill="RED" layoutX="1151.0" layoutY="263.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid weight" textAlignment="CENTER" wrappingWidth="57.00001958012581">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="invalidHeight" fill="RED" layoutX="1272.0" layoutY="190.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid height" textAlignment="CENTER" wrappingWidth="57.00001958012581">
+      <Text fx:id="invalidHeight" fill="RED" layoutX="1153.0" layoutY="185.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid height" textAlignment="CENTER" wrappingWidth="57.00001958012581">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="invalidDOB" fill="RED" layoutX="924.0" layoutY="113.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age &lt;14 not allowed" textAlignment="CENTER" wrappingWidth="65.00002002716064">
+      <Text fx:id="invalidDOB" fill="RED" layoutX="805.0" layoutY="108.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Age &lt;14 not allowed" textAlignment="CENTER" wrappingWidth="65.00002002716064">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <SVGPath fx:id="backArrowShape" content="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm28.9-143.6L209.4 288H392c13.3 0 24-10.7 24-24v-16c0-13.3-10.7-24-24-24H209.4l75.5-72.4c9.7-9.3 9.9-24.8.4-34.3l-11-10.9c-9.4-9.4-24.6-9.4-33.9 0L107.7 239c-9.4 9.4-9.4 24.6 0 33.9l132.7 132.7c9.4 9.4 24.6 9.4 33.9 0l11-10.9c9.5-9.5 9.3-25-.4-34.3z" fill="WHITE" layoutX="-217.0" layoutY="-195.0" onMouseEntered="#backArrowMouseEnteredAction" onMouseExited="#backArrowMouseExitedAction" onMousePressed="#backArrowMousePressedAction" onMouseReleased="#backArrowMouseReleasedAction" scaleX="0.08" scaleY="0.08">
+      <SVGPath fx:id="backArrowShape" content="M256 504C119 504 8 393 8 256S119 8 256 8s248 111 248 248-111 248-248 248zm28.9-143.6L209.4 288H392c13.3 0 24-10.7 24-24v-16c0-13.3-10.7-24-24-24H209.4l75.5-72.4c9.7-9.3 9.9-24.8.4-34.3l-11-10.9c-9.4-9.4-24.6-9.4-33.9 0L107.7 239c-9.4 9.4-9.4 24.6 0 33.9l132.7 132.7c9.4 9.4 24.6 9.4 33.9 0l11-10.9c9.5-9.5 9.3-25-.4-34.3z" fill="WHITE" layoutX="-222.0" layoutY="-193.0" onMouseEntered="#backArrowMouseEnteredAction" onMouseExited="#backArrowMouseExitedAction" onMousePressed="#backArrowMousePressedAction" onMouseReleased="#backArrowMouseReleasedAction" scaleX="0.08" scaleY="0.08">
          <effect>
             <DropShadow color="#8a8888" height="83.02" offsetX="10.0" offsetY="10.0" radius="47.6825" width="109.71" />
          </effect>

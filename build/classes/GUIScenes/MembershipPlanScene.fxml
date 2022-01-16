@@ -13,17 +13,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="732.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.MembershipPlanController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1220.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.MembershipPlanController">
    <children>
-      <AnchorPane layoutX="156.0" layoutY="73.0" prefHeight="200.0" prefWidth="200.0" />
       <AnchorPane prefHeight="789.0" prefWidth="600.0" style="-fx-background-color: ffbb00;" />
-      <TableView fx:id="membershipTable" editable="true" layoutX="731.0" layoutY="133.0" prefHeight="499.0" prefWidth="501.0">
-         <columns>
-            <TableColumn fx:id="id" prefWidth="111.0" text="Id" />
-            <TableColumn fx:id="packageMonth" prefWidth="164.0" text="Package(Month)" />
-            <TableColumn fx:id="price" prefWidth="224.0" text="Price" />
-         </columns>
-      </TableView>
       <ImageView fitHeight="297.0" fitWidth="425.0" layoutX="90.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Resources/20210202_133251.jpg" />
@@ -39,22 +31,29 @@
             <Font name="System Bold" size="35.0" />
          </font>
       </Text>
-      <JFXDrawer fx:id="adminDrawer" layoutY="96.0" prefHeight="350.0" prefWidth="180.0" />
-      <JFXHamburger fx:id="adminMenu" layoutX="21.0" layoutY="50.0" />
-      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="731.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+      <TableView fx:id="membershipTable" editable="true" layoutX="661.0" layoutY="133.0" prefHeight="499.0" prefWidth="501.0">
+         <columns>
+            <TableColumn fx:id="id" prefWidth="111.0" text="Id" />
+            <TableColumn fx:id="packageMonth" prefWidth="164.0" text="Package(Month)" />
+            <TableColumn fx:id="price" prefWidth="224.0" text="Price" />
+         </columns>
+      </TableView>
+      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="661.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
          <effect>
             <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
          </effect>
       </Rectangle>
-      <Text fx:id="titleRecordTrainerAtt" layoutX="800.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Membership Plan" textAlignment="CENTER" wrappingWidth="362.3603515625">
+      <Text fx:id="titleRecordTrainerAtt" layoutX="730.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Membership Plan" textAlignment="CENTER" wrappingWidth="362.3603515625">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <JFXButton fx:id="updateButton" buttonType="RAISED" layoutX="1133.0" layoutY="646.0" onMousePressed="#updatePressedAction" prefHeight="31.0" prefWidth="97.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Update" textFill="WHITE">
+      <JFXButton fx:id="updateButton" buttonType="RAISED" layoutX="1063.0" layoutY="646.0" onMousePressed="#updatePressedAction" prefHeight="31.0" prefWidth="97.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Update" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
+      <JFXDrawer fx:id="adminDrawer" layoutY="96.0" prefHeight="350.0" prefWidth="180.0" />
+      <JFXHamburger fx:id="adminMenu" layoutX="21.0" layoutY="50.0" />
    </children>
 </AnchorPane>

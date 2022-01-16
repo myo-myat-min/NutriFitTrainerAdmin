@@ -10,113 +10,111 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.MainWorkoutController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1220.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.MainWorkoutController">
     <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="277.0" layoutX="258.0" layoutY="-5.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="584.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="190.0" layoutX="362.0" layoutY="-29.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="277.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="221.0" layoutX="899.0" layoutY="146.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="512.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="299.0" layoutX="1000.0" layoutY="420.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="545.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="366.0" layoutX="595.0" layoutY="420.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="328.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="190.0" layoutX="1264.0" layoutY="502.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="168.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="110.0" layoutX="846.0" layoutY="652.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="481.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="246.0" layoutX="1114.0" layoutY="297.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="317.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="126.0" layoutX="482.0" layoutY="637.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="226.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="267.0" layoutX="-17.0" layoutY="-40.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="408.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="438.0" layoutX="-92.0" layoutY="59.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="644.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="473.0" layoutX="-28.0" layoutY="281.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="445.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="292.0" layoutX="1304.0" layoutY="148.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="128.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="133.0" layoutX="969.0" layoutY="-23.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="295.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="221.0" layoutX="-67.0" layoutY="193.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="226.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="246.0" layoutX="1129.0" layoutY="-63.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="307.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="246.0" layoutX="-13.0" layoutY="374.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="226.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="208.0" layoutX="76.0" layoutY="560.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="211.0" />
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="433.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+        <Label fx:id="label" layoutX="57.0" layoutY="122.0" minHeight="16" minWidth="69" />
+      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="366.0" layoutY="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
          <effect>
             <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
          </effect>
       </Rectangle>
-      <Text fx:id="titleRecordTrainerAtt" layoutX="460.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Workout" textAlignment="CENTER" wrappingWidth="445.3603515625">
+      <Text fx:id="titleRecordTrainerAtt" layoutX="393.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="View Workout" textAlignment="CENTER" wrappingWidth="445.3603515625">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="162.0" layoutX="406.0" layoutY="191.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="217.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="162.0" layoutX="337.0" layoutY="193.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="217.0">
          <effect>
             <DropShadow color="#8a8888" offsetX="0.5" offsetY="0.5" />
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="422.0" layoutY="216.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="185.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="353.0" layoutY="218.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="185.0">
          <effect>
             <DropShadow color="#8a8888" />
          </effect>
       </Rectangle>
-      <JFXButton fx:id="bmical" buttonType="RAISED" layoutX="464.0" layoutY="288.0" onAction="#handleButtonAction1" prefHeight="34.0" prefWidth="102.0" ripplerFill="#35ae05" style="-fx-background-color: white;" text="Click" textFill="#ffbb00">
+      <JFXButton fx:id="bmical" buttonType="RAISED" layoutX="395.0" layoutY="290.0" onAction="#handleButtonAction1" prefHeight="34.0" prefWidth="102.0" ripplerFill="#35ae05" style="-fx-background-color: white;" text="Click" textFill="#ffbb00">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <Text layoutX="451.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Workout" textAlignment="CENTER" wrappingWidth="128.08836624026299">
+      <Text layoutX="382.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All Workout" textAlignment="CENTER" wrappingWidth="128.08836624026299">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="162.0" layoutX="743.0" layoutY="191.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="217.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="162.0" layoutX="674.0" layoutY="193.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="217.0">
          <effect>
             <DropShadow color="#8a8888" offsetX="0.5" offsetY="0.5" />
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="759.0" layoutY="216.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="185.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="690.0" layoutY="218.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="185.0">
          <effect>
             <DropShadow color="#8a8888" />
          </effect>
       </Rectangle>
-      <JFXButton fx:id="bmrcal" buttonType="RAISED" layoutX="801.0" layoutY="288.0" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="102.0" ripplerFill="#35ae05" style="-fx-background-color: white;" text="Click" textFill="#ffbb00">
+      <JFXButton fx:id="bmrcal" buttonType="RAISED" layoutX="732.0" layoutY="290.0" onAction="#handleButtonAction" prefHeight="34.0" prefWidth="102.0" ripplerFill="#35ae05" style="-fx-background-color: white;" text="Click" textFill="#ffbb00">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <Text layoutX="788.0" layoutY="248.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loose Weight" textAlignment="CENTER" wrappingWidth="128.08836624026299">
+      <Text layoutX="719.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Loose Weight" textAlignment="CENTER" wrappingWidth="128.08836624026299">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="162.0" layoutX="406.0" layoutY="428.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="217.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="162.0" layoutX="337.0" layoutY="430.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="217.0">
          <effect>
             <DropShadow color="#8a8888" offsetX="0.5" offsetY="0.5" />
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="422.0" layoutY="453.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="185.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="353.0" layoutY="455.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="185.0">
          <effect>
             <DropShadow color="#8a8888" />
          </effect>
       </Rectangle>
-      <JFXButton fx:id="caloriecal" buttonType="RAISED" layoutX="464.0" layoutY="525.0" onAction="#handleButtonAction3" prefHeight="34.0" prefWidth="102.0" ripplerFill="#35ae05" style="-fx-background-color: white;" text="Click" textFill="#ffbb00">
+      <JFXButton fx:id="caloriecal" buttonType="RAISED" layoutX="395.0" layoutY="527.0" onAction="#handleButtonAction3" prefHeight="34.0" prefWidth="102.0" ripplerFill="#35ae05" style="-fx-background-color: white;" text="Click" textFill="#ffbb00">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <Text layoutX="435.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gain Weight" textAlignment="CENTER" wrappingWidth="160.08836624026299">
+      <Text layoutX="366.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gain Weight" textAlignment="CENTER" wrappingWidth="160.08836624026299">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="162.0" layoutX="744.0" layoutY="428.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="217.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="162.0" layoutX="675.0" layoutY="430.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="217.0">
          <effect>
             <DropShadow color="#8a8888" offsetX="0.5" offsetY="0.5" />
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="755.0" layoutY="454.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="196.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="686.0" layoutY="456.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="196.0">
          <effect>
             <DropShadow color="#8a8888" />
          </effect>
       </Rectangle>
-      <JFXButton fx:id="idealweightcal" buttonType="RAISED" layoutX="802.0" layoutY="525.0" onAction="#handleButtonAction4" prefHeight="34.0" prefWidth="102.0" ripplerFill="#35ae05" style="-fx-background-color: white;" text="Click" textFill="#ffbb00">
+      <JFXButton fx:id="idealweightcal" buttonType="RAISED" layoutX="733.0" layoutY="527.0" onAction="#handleButtonAction4" prefHeight="34.0" prefWidth="102.0" ripplerFill="#35ae05" style="-fx-background-color: white;" text="Click" textFill="#ffbb00">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <Text layoutX="755.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Get Fitter" textAlignment="CENTER" wrappingWidth="196.08836624026299">
+      <Text layoutX="686.0" layoutY="487.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Get Fitter" textAlignment="CENTER" wrappingWidth="196.08836624026299">
          <font>
             <Font size="18.0" />
          </font>

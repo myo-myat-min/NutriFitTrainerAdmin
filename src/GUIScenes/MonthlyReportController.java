@@ -448,7 +448,7 @@ public class MonthlyReportController implements Initializable {
                         MonthlyReportPrintController controller = loader.getController();
                         controller.addFineData(Integer.parseInt(txtfieldFinePerDay.getText()), 
                                 Integer.parseInt(txtfieldFinePerMinute.getText()), String.valueOf(dateForData.getValue()));
-                        Scene scene = new Scene(printScene, 1360, 700);
+                        Scene scene = new Scene(printScene);
                         scene.getStylesheets().add("CSS/TableDesign.css");
                         Stage window = new Stage();
                         window.setWidth(598);

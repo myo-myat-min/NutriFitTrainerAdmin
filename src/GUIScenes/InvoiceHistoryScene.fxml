@@ -12,7 +12,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="732.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.InvoiceHistoryController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1220.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.InvoiceHistoryController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="318.0" layoutX="248.0" layoutY="-15.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="584.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="162.0" layoutX="352.0" layoutY="-11.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="277.0" />
@@ -31,7 +31,9 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="246.0" layoutX="1209.0" layoutY="-73.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="261.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="246.0" layoutX="-23.0" layoutY="364.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="226.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="342.0" layoutX="66.0" layoutY="499.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="211.0" />
-      <TableView fx:id="memberSeeUpdateTable" editable="true" layoutX="103.0" layoutY="183.0" prefHeight="362.0" prefWidth="1160.0" style="-fx-selection-bar: #35ae50;">
+      <JFXDrawer fx:id="adminDrawer" layoutY="96.0" prefHeight="350.0" prefWidth="180.0" />
+      <JFXHamburger fx:id="adminMenu" layoutX="21.0" layoutY="50.0" />
+      <TableView fx:id="memberSeeUpdateTable" editable="true" layoutX="49.0" layoutY="181.0" prefHeight="362.0" prefWidth="1160.0" style="-fx-selection-bar: #35ae50;">
          <columns>
             <TableColumn fx:id="invoiceId" prefWidth="85.0" text="Invoice ID" />
             <TableColumn fx:id="memberId" prefWidth="125.0" text="Member ID" />
@@ -43,21 +45,19 @@
             <TableColumn fx:id="adminName" prefWidth="138.0" text="Admin Name" />
          </columns>
       </TableView>
-      <JFXDrawer fx:id="adminDrawer" layoutY="96.0" prefHeight="350.0" prefWidth="180.0" />
-      <JFXHamburger fx:id="adminMenu" layoutX="21.0" layoutY="50.0" />
-      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="433.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="366.0" layoutY="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
          <effect>
             <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
          </effect>
       </Rectangle>
-      <Text fx:id="titleRecordTrainerAtt" layoutX="460.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invoice History" textAlignment="CENTER" wrappingWidth="445.3603515625">
+      <Text fx:id="titleRecordTrainerAtt" layoutX="393.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invoice History" textAlignment="CENTER" wrappingWidth="445.3603515625">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <JFXDatePicker fx:id="endDateSearch" defaultColor="BLACK" editable="false" layoutX="595.0" layoutY="128.0" prefHeight="31.0" prefWidth="211.0" promptText="Purchased End Date" style="-fx-font-size: 15px;" />
-      <JFXDatePicker fx:id="startDateSearch" defaultColor="BLACK" editable="false" layoutX="347.0" layoutY="128.0" prefHeight="31.0" prefWidth="211.0" promptText="Purchased Start Date" style="-fx-font-size: 15px;" />
-      <JFXTextField fx:id="txtFieldSearchByName" focusColor="BLACK" labelFloat="true" layoutX="838.0" layoutY="118.0" prefHeight="37.0" prefWidth="211.0" promptText="Search by name" unFocusColor="BLACK">
+      <JFXDatePicker fx:id="endDateSearch" defaultColor="BLACK" editable="false" layoutX="541.0" layoutY="126.0" prefHeight="31.0" prefWidth="211.0" promptText="Purchased End Date" style="-fx-font-size: 15px;" />
+      <JFXDatePicker fx:id="startDateSearch" defaultColor="BLACK" editable="false" layoutX="293.0" layoutY="126.0" prefHeight="31.0" prefWidth="211.0" promptText="Purchased Start Date" style="-fx-font-size: 15px;" />
+      <JFXTextField fx:id="txtFieldSearchByName" focusColor="BLACK" labelFloat="true" layoutX="784.0" layoutY="116.0" prefHeight="37.0" prefWidth="211.0" promptText="Search by name" unFocusColor="BLACK">
          <font>
             <Font size="15.0" />
          </font>

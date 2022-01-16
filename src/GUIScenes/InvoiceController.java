@@ -156,7 +156,7 @@ public class InvoiceController implements Initializable {
         if (alert.getResult() == ButtonType.YES) {
             try {
                 Parent trainerSignUpScene = FXMLLoader.load(getClass().getResource("InvoicePrintScene.fxml"));
-                Scene scene = new Scene(trainerSignUpScene, 1360, 700);
+                Scene scene = new Scene(trainerSignUpScene);
                 Stage window = new Stage();
                 window.setWidth(495);
                 window.setHeight(690);

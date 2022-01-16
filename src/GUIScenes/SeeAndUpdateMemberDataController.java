@@ -270,7 +270,7 @@ public class SeeAndUpdateMemberDataController implements Initializable {
                 MemberUpdateSaveController memUpSaveControl = loader.getController();
                 try {
                     memUpSaveControl.rawData(memberSeeUpdateTable.getSelectionModel().getSelectedItem());
-                    Scene scene = new Scene(memberSignUpScene, 1360, 700);
+                    Scene scene = new Scene(memberSignUpScene);
                     Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     window.setResizable(false);
                     window.setScene(scene);

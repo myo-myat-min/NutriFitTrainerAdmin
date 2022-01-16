@@ -105,7 +105,7 @@ public class UpdateScheduleController implements Initializable {
     void backArrowMouseReleasedAction(MouseEvent event) {
         try {
             Parent trainerSignUpScene = FXMLLoader.load(getClass().getResource("ViewScheduleScene.fxml"));
-            Scene scene = new Scene(trainerSignUpScene, 1360, 700);
+            Scene scene = new Scene(trainerSignUpScene);
             scene.getStylesheets().add("CSS/TableDesign.css");
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setResizable(false);
@@ -152,7 +152,7 @@ public class UpdateScheduleController implements Initializable {
                             loader.setLocation(getClass().getResource("ViewScheduleScene.fxml"));
                             Parent trainerMyAccountScene = loader.load();
                             ViewScheduleController controller = loader.getController();
-                            Scene scene = new Scene(trainerMyAccountScene, 1360, 700);
+                            Scene scene = new Scene(trainerMyAccountScene);
                             scene.getStylesheets().add("CSS/TableDesign.css");
                             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                             if (rs.getString("email").equals(window.getTitle())) {

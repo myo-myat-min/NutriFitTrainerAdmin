@@ -617,7 +617,7 @@ public class SeeAndUpdateAdminDataController extends Stage implements Initializa
                 AdminUpdateSaveController memUpSaveControl = loader.getController();
                 try {
                     memUpSaveControl.rawData(adminTable.getSelectionModel().getSelectedItem());
-                    Scene scene = new Scene(memberSignUpScene, 1360, 700);
+                    Scene scene = new Scene(memberSignUpScene);
                     Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     if (adminTable.getSelectionModel().getSelectedItem().getEmail().equals(window.getTitle())) {
                         new Alert(Alert.AlertType.INFORMATION, "Your data have to be updated in this scene.", ButtonType.OK).showAndWait();

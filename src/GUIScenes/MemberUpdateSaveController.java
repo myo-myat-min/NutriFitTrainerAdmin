@@ -233,7 +233,7 @@ public class MemberUpdateSaveController implements Initializable {
     void backArrowMouseReleasedAction(MouseEvent event) {
         try {
             Parent trainerSignUpScene = FXMLLoader.load(getClass().getResource("SeeAndUpdateMemberDataScene.fxml"));
-            Scene scene = new Scene(trainerSignUpScene, 1360, 700);
+            Scene scene = new Scene(trainerSignUpScene);
             scene.getStylesheets().add("CSS/TableDesign.css");
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setResizable(false);
@@ -308,7 +308,7 @@ public class MemberUpdateSaveController implements Initializable {
                     if (alertRecorded.getResult() == ButtonType.OK) {
                         try {
                             Parent trainerSignUpScene = FXMLLoader.load(getClass().getResource("SeeAndUpdateMemberDataScene.fxml"));
-                            Scene scene = new Scene(trainerSignUpScene, 1360, 700);
+                            Scene scene = new Scene(trainerSignUpScene);
                             scene.getStylesheets().add("CSS/TableDesign.css");
                             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                             window.setResizable(false);

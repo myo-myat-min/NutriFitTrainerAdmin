@@ -141,7 +141,7 @@ public class AdminSignUpController extends Stage implements Initializable {
                     new Alert(Alert.AlertType.INFORMATION, "Admin data are recorded", ButtonType.OK).showAndWait();
                     try {
                         Parent trainerSignUpScene = FXMLLoader.load(getClass().getResource("AdminSignUpScene.fxml"));
-                        Scene scene = new Scene(trainerSignUpScene, 1360, 700);
+                        Scene scene = new Scene(trainerSignUpScene);
                         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                         window.setResizable(false);
                         window.setScene(scene);

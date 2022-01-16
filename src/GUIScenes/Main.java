@@ -36,79 +36,80 @@ import javafx.stage.StageStyle;
  */
 public class Main extends Application {
 
-    @Override
-    public void start(Stage stage) throws Exception {
+	@Override
+	public void start(Stage stage) throws Exception {
 
-        try {
-            ServerSocket sc;
-            try {
-                sc = new ServerSocket(9090);
-                System.out.println(sc.toString());
-                System.err.println("server opened");
+		try {
+			ServerSocket sc;
+			try {
+				sc = new ServerSocket(9090);
+				System.out.println(sc.toString());
+				System.err.println("server opened");
 
-                new Thread(() -> {
+				new Thread(() -> {
 
-                    while (true) {
-                        try {
-                            Socket sock = sc.accept();
-                            InputStream is = sock.getInputStream();
+					while (true) {
+						try {
+							Socket sock = sc.accept();
+							InputStream is = sock.getInputStream();
 
-                            BufferedReader bs = new BufferedReader(new InputStreamReader(is));
-                            String s = new String("ssasas");
+							BufferedReader bs = new BufferedReader(new InputStreamReader(is));
+							String s = new String("ssasas");
 
 //                            System.out.println(bs.readLine());
-                            System.out.println("Accepted connection : " + sock);
-                            // send file
-                            File myFile = new File(bs.readLine());
-                            byte[] mybytearray = new byte[(int) myFile.length()];
-                            FileInputStream fis = new FileInputStream(myFile);
-                            BufferedInputStream bis = new BufferedInputStream(fis);
-                            bis.read(mybytearray, 0, mybytearray.length);
-                            OutputStream os = sock.getOutputStream();
+							System.out.println("Accepted connection : " + sock);
+							// send file
+							File myFile = new File(bs.readLine());
+							byte[] mybytearray = new byte[(int) myFile.length()];
+							FileInputStream fis = new FileInputStream(myFile);
+							BufferedInputStream bis = new BufferedInputStream(fis);
+							bis.read(mybytearray, 0, mybytearray.length);
+							OutputStream os = sock.getOutputStream();
 //                            System.out.println("Sending " + FILE_TO_SEND + "(" + mybytearray.length + "bytes)");
-                            os.write(mybytearray, 0, mybytearray.length);
-                            os.flush();
-                            System.out.println("Done.");
-                            sock.close();
-                            bis.close();
-                        } catch (IOException ex) {
+							os.write(mybytearray, 0, mybytearray.length);
+							os.flush();
+							System.out.println("Done.");
+							sock.close();
+							bis.close();
+						} catch (IOException ex) {
 
-                        }
+						}
 
-                    }
+					}
 
-                }).start();
-            } catch (IOException ex) {
+				}).start();
+			} catch (IOException ex) {
 
-            }
+			}
 
-        } catch (Exception e) {
+		} catch (Exception e) {
 
-        }
+		}
 
-        Parent memberSignUpScene = FXMLLoader.load(getClass().getResource("TrainerAdminSignInScene.fxml"));
-        Scene scene = new Scene(memberSignUpScene, 1360, 700);
-        stage.setOnCloseRequest((event) -> {
-            Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure to exit?", ButtonType.YES, ButtonType.NO);
-            alert.showAndWait();
+		Parent memberSignUpScene = FXMLLoader.load(getClass().getResource("TrainerAdminSignInScene.fxml"));
+		Scene scene = new Scene(memberSignUpScene);
+		stage.setOnCloseRequest((event) -> {
+			Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure to exit?", ButtonType.YES,
+					ButtonType.NO);
+			alert.showAndWait();
 
-            if (alert.getResult() == ButtonType.YES) {
-                System.exit(0);
-            } else {
-                event.consume();
-            }
-        });
-        stage.setTitle("NutriFit");
+			if (alert.getResult() == ButtonType.YES) {
+				System.exit(0);
+			} else {
+				event.consume();
+			}
+		});
+		stage.setTitle("NutriFit");
 
-        stage.setResizable(false);
-        stage.centerOnScreen();
-        stage.setScene(scene);
-        stage.show();
+		stage.setResizable(false);
+		stage.centerOnScreen();
+		stage.setScene(scene);
+		stage.show();
 
-    }
+	}
 
-    public static void main(String[] args) {
-        launch(args);
+	public static void main(String[] args) {
+		launch(args);
 
-    }
+	}
 }

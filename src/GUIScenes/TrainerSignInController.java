@@ -158,7 +158,7 @@ public class TrainerSignInController implements Initializable {
                                     loader.setLocation(getClass().getResource("TrainerMyAccountScene.fxml"));
                                     Parent trainerMyAccountScene = loader.load();
                                     TrainerMyAccountController controller = loader.getController();
-                                    Scene scene = new Scene(trainerMyAccountScene, 1360, 700);
+                                    Scene scene = new Scene(trainerMyAccountScene);
                                     Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                                     window.setResizable(false);
                                     window.setScene(scene);
@@ -398,7 +398,7 @@ public class TrainerSignInController implements Initializable {
     void backArrowMouseReleasedAction(MouseEvent event) {
         try {
             Parent trainerSignUpScene = FXMLLoader.load(getClass().getResource("TrainerAdminSignInScene.fxml"));
-            Scene scene = new Scene(trainerSignUpScene, 1360, 700);
+            Scene scene = new Scene(trainerSignUpScene);
             Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
             window.setResizable(false);
             window.setScene(scene);

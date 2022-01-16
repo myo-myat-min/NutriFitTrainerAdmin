@@ -393,7 +393,7 @@ public class UpdateWorkoutController implements Initializable {
 
                         new Alert(AlertType.INFORMATION, "Data are uploaded", ButtonType.OK).showAndWait();
                         Parent trainerSignUpScene = FXMLLoader.load(getClass().getResource("SetWorkoutScene.fxml"));
-                        Scene scene = new Scene(trainerSignUpScene, 1360, 700);
+                        Scene scene = new Scene(trainerSignUpScene);
                         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                         window.setResizable(false);
                         window.setScene(scene);

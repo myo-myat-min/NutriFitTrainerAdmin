@@ -156,7 +156,7 @@ public class AdminUpdateSaveController extends Stage implements Initializable {
                     loader.setLocation(getClass().getResource("SeeAndUpdateAdminDataScene.fxml"));
                     Parent trainerMyAccountScene = loader.load();
                     SeeAndUpdateAdminDataController controller = loader.getController();
-                    Scene scene = new Scene(trainerMyAccountScene, 1360, 700);
+                    Scene scene = new Scene(trainerMyAccountScene);
                     scene.getStylesheets().add("CSS/TableDesign.css");
                     Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     if (rs.getString("email").equals(window.getTitle())) {
@@ -234,7 +234,7 @@ public class AdminUpdateSaveController extends Stage implements Initializable {
                                     loader.setLocation(getClass().getResource("SeeAndUpdateAdminDataScene.fxml"));
                                     Parent trainerMyAccountScene = loader.load();
                                     SeeAndUpdateAdminDataController controller = loader.getController();
-                                    Scene scene = new Scene(trainerMyAccountScene, 1360, 700);
+                                    Scene scene = new Scene(trainerMyAccountScene);
                                     scene.getStylesheets().add("CSS/TableDesign.css");
                                     Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                                     if (rs.getString("email").equals(window.getTitle())) {

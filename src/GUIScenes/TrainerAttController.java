@@ -184,7 +184,7 @@ public class TrainerAttController implements Initializable {
             try {
                 db.DailyAttendancetable.insert_DA(a);
                 Parent trainerSignUpScene = FXMLLoader.load(getClass().getResource("TrainerAttendanceScene.fxml"));
-                Scene scene = new Scene(trainerSignUpScene, 1360, 700);
+                Scene scene = new Scene(trainerSignUpScene);
                 scene.getStylesheets().add("CSS/TableDesign.css");
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 window.setResizable(false);

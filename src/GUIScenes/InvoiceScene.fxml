@@ -15,8 +15,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" fx:id="combobox" prefHeight="732.0" prefWidth="1366.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.InvoiceController">
+<AnchorPane id="AnchorPane" fx:id="combobox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1220.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.InvoiceController">
     <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="317.0" layoutX="1031.0" layoutY="-63.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="206.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="304.0" layoutX="796.0" layoutY="173.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="343.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" layoutX="600.0" layoutY="55.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="343.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="350.0" layoutX="712.0" layoutY="309.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="300.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="267.0" layoutX="521.0" layoutY="387.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="128.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="206.0" layoutX="627.0" layoutY="619.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="161.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="195.0" layoutX="871.0" layoutY="547.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="272.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="250.0" layoutX="1102.0" layoutY="378.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="143.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="161.0" layoutX="687.0" layoutY="-77.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="194.0" />
         <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffbb00" height="789.0" layoutX="-15.0" layoutY="-21.0" stroke="#fcf8f8" strokeType="INSIDE" width="600.0" />
       <ImageView fitHeight="297.0" fitWidth="425.0" layoutX="90.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
@@ -36,74 +45,74 @@
       </Text>
       <JFXHamburger fx:id="adminMenu" layoutX="21.0" layoutY="50.0" onMousePressed="#adminMenuMousePressedAction" />
       <JFXDrawer fx:id="adminDrawer" layoutY="96.0" prefHeight="350.0" prefWidth="180.0" />
-      <Circle fx:id="completeCircName" fill="RED" layoutX="767.0" layoutY="60.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="731.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+      <Circle fx:id="completeCircName" fill="RED" layoutX="689.0" layoutY="62.0" radius="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="643.0" layoutY="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
          <effect>
             <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
          </effect>
       </Rectangle>
-      <Text fx:id="titleInvoice" layoutX="932.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invoice" wrappingWidth="97.3603515625">
+      <Text fx:id="titleInvoice" layoutX="854.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invoice" wrappingWidth="97.3603515625">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="275.0" layoutX="708.0" layoutY="154.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="546.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="275.0" layoutX="630.0" layoutY="156.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="546.0">
          <effect>
             <DropShadow color="#8a8888" offsetX="1.0" offsetY="1.0" />
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="1017.0" layoutY="349.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="939.0" layoutY="351.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0">
          <effect>
             <DropShadow color="#8a8888" height="11.0" offsetX="1.0" offsetY="1.0" radius="5.0" width="11.0" />
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="91.0" layoutX="1017.0" layoutY="172.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="91.0" layoutX="939.0" layoutY="174.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0">
          <effect>
             <DropShadow color="#8a8888" height="11.0" offsetX="1.0" offsetY="1.0" radius="5.0" width="11.0" />
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="74.0" layoutX="1017.0" layoutY="266.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="74.0" layoutX="939.0" layoutY="268.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="206.0">
          <effect>
             <DropShadow color="#8a8888" height="11.0" offsetX="1.0" offsetY="1.0" radius="5.0" width="11.0" />
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="738.0" layoutY="349.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="272.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="660.0" layoutY="351.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="272.0">
          <effect>
             <DropShadow color="#8a8888" height="11.0" offsetX="1.0" offsetY="1.0" radius="5.0" width="11.0" />
          </effect>
       </Rectangle>
-      <Text fx:id="dateInvoice" layoutX="753.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="168.999990940094">
+      <Text fx:id="dateInvoice" layoutX="675.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" wrappingWidth="168.999990940094">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <JFXTextField fx:id="memberName" editable="false" focusColor="BLACK" labelFloat="true" layoutX="1025.0" layoutY="200.0" promptText="Member Name" unFocusColor="BLACK">
+      <JFXTextField fx:id="memberName" editable="false" focusColor="BLACK" labelFloat="true" layoutX="947.0" layoutY="202.0" promptText="Member Name" unFocusColor="BLACK">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXComboBox fx:id="packageChoice" focusColor="BLACK" labelFloat="true" layoutX="1025.0" layoutY="291.0" prefHeight="25.0" prefWidth="169.0" promptText="Package Choice" style="-fx-font-size: 15px;" unFocusColor="BLACK" />
-      <Text fx:id="packageFees" layoutX="1025.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fees" wrappingWidth="168.999990940094">
+      <JFXComboBox fx:id="packageChoice" focusColor="BLACK" labelFloat="true" layoutX="947.0" layoutY="293.0" prefHeight="25.0" prefWidth="169.0" promptText="Package Choice" style="-fx-font-size: 15px;" unFocusColor="BLACK" />
+      <Text fx:id="packageFees" layoutX="947.0" layoutY="382.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fees" wrappingWidth="168.999990940094">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="171.0" layoutX="738.0" layoutY="171.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="272.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="171.0" layoutX="660.0" layoutY="173.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="272.0">
          <effect>
             <DropShadow color="#8a8888" height="11.0" offsetX="1.0" offsetY="1.0" radius="5.0" width="11.0" />
          </effect>
       </Rectangle>
-      <Text fx:id="gymPhone" layoutX="752.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone : 09955598481" wrappingWidth="194.0">
+      <Text fx:id="gymPhone" layoutX="674.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone : 09955598481" wrappingWidth="194.0">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </Text>
-      <Text fx:id="gymAddress" layoutX="753.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address :" wrappingWidth="243.99999578297138">
+      <Text fx:id="gymAddress" layoutX="675.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address :" wrappingWidth="243.99999578297138">
          <font>
             <Font name="Arial" size="18.0" />
          </font>
       </Text>
-      <JFXButton fx:id="printButton" buttonType="RAISED" layoutX="1157.0" layoutY="446.0" onMouseReleased="#printReleasedAction" prefHeight="40.0" prefWidth="97.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Print" textFill="WHITE">
+      <JFXButton fx:id="printButton" buttonType="RAISED" layoutX="1079.0" layoutY="448.0" onMouseReleased="#printReleasedAction" prefHeight="40.0" prefWidth="97.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Print" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
