@@ -45,12 +45,12 @@
             <TableColumn fx:id="medicalData" prefWidth="120.0" text="Medical Data" />
          </columns>
       </TableView>
-      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="383.0" layoutY="34.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="366.0" layoutY="32.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
          <effect>
             <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
          </effect>
       </Rectangle>
-      <Text fx:id="titleRecordTrainerAtt" layoutX="410.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Data" textAlignment="CENTER" wrappingWidth="445.3603515625">
+      <Text fx:id="titleRecordTrainerAtt" layoutX="393.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member Data" textAlignment="CENTER" wrappingWidth="445.3603515625">
          <font>
             <Font size="30.0" />
          </font>

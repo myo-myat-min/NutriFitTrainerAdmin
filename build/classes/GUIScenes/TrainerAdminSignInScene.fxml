@@ -2,6 +2,8 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.RadialGradient?>
 <?import javafx.scene.paint.Stop?>
@@ -9,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="732.0" prefWidth="1220.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.TrainerAdminSignInController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1220.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUIScenes.TrainerAdminSignInController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="568.0" layoutY="435.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="277.0" layoutX="693.0" layoutY="498.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
@@ -20,6 +22,11 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="223.0" layoutX="541.0" layoutY="-16.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="278.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="358.0" layoutX="541.0" layoutY="116.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="120.0" />
       <Rectangle fx:id="welcomeTemplate" arcHeight="5.0" arcWidth="5.0" fill="#ffbb00" height="789.0" layoutX="-9.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="600.0" />
+      <ImageView fitHeight="297.0" fitWidth="425.0" layoutX="90.0" layoutY="207.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Resources/20210202_133251.jpg" />
+         </image>
+      </ImageView>
       <Text fx:id="txtWelcome" fill="WHITE" layoutX="185.0" layoutY="496.0" strokeType="OUTSIDE" strokeWidth="0.0" text="W  E  L  C  O  M  E   T  O">
          <font>
             <Font size="20.0" />
@@ -30,57 +37,57 @@
             <Font name="System Bold" size="35.0" />
          </font>
       </Text>
-      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="731.0" layoutY="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+      <Rectangle fx:id="titleTemplate" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="643.0" layoutY="39.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
          <effect>
             <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
          </effect>
       </Rectangle>
-      <Text fx:id="titleTrainerSignUp" layoutX="866.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign In" textAlignment="CENTER" wrappingWidth="229.3603515625">
+      <Text fx:id="titleTrainerSignUp" layoutX="784.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign In" textAlignment="CENTER" wrappingWidth="229.3603515625">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="209.0" layoutX="731.0" layoutY="191.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="229.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="209.0" layoutX="649.0" layoutY="191.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="229.0">
          <effect>
             <DropShadow color="#8a8888" offsetX="0.5" offsetY="0.5" />
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="209.0" layoutX="1002.0" layoutY="191.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="229.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="#ffbb00" height="209.0" layoutX="920.0" layoutY="191.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="229.0">
          <effect>
             <DropShadow color="#8a8888" offsetX="-0.5" offsetY="0.5" />
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="753.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="185.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="671.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="185.0">
          <effect>
             <DropShadow color="#8a8888" />
          </effect>
       </Rectangle>
-      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="1024.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="185.0">
+      <Rectangle arcHeight="30.0" arcWidth="30.0" fill="WHITE" height="50.0" layoutX="942.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="185.0">
          <effect>
             <DropShadow color="#8a8888" />
          </effect>
       </Rectangle>
-      <JFXButton fx:id="trainerSignIn" buttonType="RAISED" layoutX="795.0" layoutY="316.0" onAction="#trainerSignInButtonAction" prefHeight="34.0" prefWidth="102.0" ripplerFill="#35ae05" style="-fx-background-color: white;" text="Sign In" textFill="#ffbb00">
+      <JFXButton fx:id="trainerSignIn" buttonType="RAISED" layoutX="713.0" layoutY="316.0" onAction="#trainerSignInButtonAction" prefHeight="34.0" prefWidth="102.0" ripplerFill="#35ae05" style="-fx-background-color: white;" text="Sign In" textFill="#ffbb00">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <JFXButton fx:id="adminSignIn" buttonType="RAISED" layoutX="1066.0" layoutY="316.0" onAction="#adminSignInButtonAction" prefHeight="34.0" prefWidth="102.0" ripplerFill="#35ae05" style="-fx-background-color: white;" text="Sign In" textFill="#ffbb00">
+      <JFXButton fx:id="adminSignIn" buttonType="RAISED" layoutX="984.0" layoutY="316.0" onAction="#adminSignInButtonAction" prefHeight="34.0" prefWidth="102.0" ripplerFill="#35ae05" style="-fx-background-color: white;" text="Sign In" textFill="#ffbb00">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>
       </JFXButton>
-      <Text layoutX="782.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trainer Sign In" textAlignment="CENTER" wrappingWidth="128.08836624026299">
+      <Text layoutX="700.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Trainer Sign In" textAlignment="CENTER" wrappingWidth="128.08836624026299">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="1053.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Sign In" textAlignment="CENTER" wrappingWidth="128.08836624026299">
+      <Text layoutX="971.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Sign In" textAlignment="CENTER" wrappingWidth="128.08836624026299">
          <font>
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="795.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by " textAlignment="CENTER" wrappingWidth="370.088404327631">
+      <Text layoutX="713.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by " textAlignment="CENTER" wrappingWidth="370.088404327631">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
