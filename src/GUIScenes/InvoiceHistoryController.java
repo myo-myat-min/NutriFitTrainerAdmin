@@ -12,6 +12,7 @@ import com.jfoenix.controls.JFXTextField;
 import com.jfoenix.transitions.hamburger.HamburgerBasicCloseTransition;
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -32,56 +33,56 @@ import javafx.scene.text.Text;
  */
 public class InvoiceHistoryController implements Initializable {
 
-    @FXML
-    private TableView<db.invoice> memberSeeUpdateTable;
+	@FXML
+	private TableView<db.invoice> memberSeeUpdateTable;
 
-    @FXML
-    private TableColumn<db.invoice, ?> invoiceId;
+	@FXML
+	private TableColumn<db.invoice, String> invoiceId;
 
-    @FXML
-    private TableColumn<db.invoice, ?> memberId;
+	@FXML
+	private TableColumn<db.invoice, String> memberId;
 
-    @FXML
-    private TableColumn<db.invoice, ?> memberName;
+	@FXML
+	private TableColumn<db.invoice, String> memberName;
 
-    @FXML
-    private TableColumn<db.invoice, ?> email;
+	@FXML
+	private TableColumn<db.invoice, String> email;
 
-    @FXML
-    private TableColumn<db.invoice, ?> packageMonth;
+	@FXML
+	private TableColumn<db.invoice, String> packageMonth;
 
-    @FXML
-    private TableColumn<db.invoice, ?> purchaseDate;
+	@FXML
+	private TableColumn<db.invoice, LocalDate> purchaseDate;
 
-    @FXML
-    private TableColumn<db.invoice, ?> endDate;
-    
-    @FXML
-    private TableColumn<db.invoice, ?> adminName;
+	@FXML
+	private TableColumn<db.invoice, LocalDate> endDate;
 
-    @FXML
-    private JFXDrawer adminDrawer;
+	@FXML
+	private TableColumn<db.invoice, String> adminName;
 
-    @FXML
-    private JFXHamburger adminMenu;
+	@FXML
+	private JFXDrawer adminDrawer;
 
-    @FXML
-    private Rectangle titleTemplate;
+	@FXML
+	private JFXHamburger adminMenu;
 
-    @FXML
-    private Text titleRecordTrainerAtt;
+	@FXML
+	private Rectangle titleTemplate;
 
-    @FXML
-    private JFXDatePicker startDateSearch;
+	@FXML
+	private Text titleRecordTrainerAtt;
 
-    @FXML
-    private JFXDatePicker endDateSearch;
+	@FXML
+	private JFXDatePicker startDateSearch;
+
+	@FXML
+	private JFXDatePicker endDateSearch;
 
 //    @FXML
 //    private JFXButton clearButton;
 
-    @FXML
-    private JFXTextField txtFieldSearchByName;
+	@FXML
+	private JFXTextField txtFieldSearchByName;
 
 //    @FXML
 //    void clearPressedAction(MouseEvent event) {
@@ -98,109 +99,110 @@ public class InvoiceHistoryController implements Initializable {
 //        }
 //    }
 
-    ObservableList<?> list = FXCollections.observableArrayList( //            new RecordAttendanceTrainer("T-00001", "Mg Mg", "nothing"),
-            //            new RecordAttendanceTrainer("T-00002", "Ko Ko", "nothing"),
-            //            new RecordAttendanceTrainer("T-00003", "Mg Mya", "nothing")
-            //            new RecordAttendanceTrainer(4, "Aye Aye", "nothing"),
-            //            new RecordAttendanceTrainer(5, "Aung Aung", "nothing")
-            );
+	ObservableList<?> list = FXCollections.observableArrayList( // new RecordAttendanceTrainer("T-00001", "Mg Mg",
+																// "nothing"),
+	// new RecordAttendanceTrainer("T-00002", "Ko Ko", "nothing"),
+	// new RecordAttendanceTrainer("T-00003", "Mg Mya", "nothing")
+	// new RecordAttendanceTrainer(4, "Aye Aye", "nothing"),
+	// new RecordAttendanceTrainer(5, "Aung Aung", "nothing")
+	);
 
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        
-        txtFieldSearchByName.textProperty().addListener((observable, oldValue, newValue) -> {
-            startDateSearch.setValue(null);
-            endDateSearch.setValue(null);
-            txtFieldSearchByName.setText(newValue);
-            if (newValue != null) {
-                ArrayList<db.invoice> i = db.invoice_table.ShowInvoices_ByNames(newValue);
-                memberSeeUpdateTable.getItems().clear();
-                memberSeeUpdateTable.getItems().addAll(i);
-                memberSeeUpdateTable.refresh();
-            } else {
-                ArrayList<db.invoice> i = db.invoice_table.ShowInvoices();
-                memberSeeUpdateTable.getItems().clear();
-                memberSeeUpdateTable.getItems().addAll(i);
-                memberSeeUpdateTable.refresh();
-            }
-        });
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
 
-        endDateSearch.valueProperty().addListener((observable, oldValue, newValue) -> {
-            txtFieldSearchByName.clear();
-            endDateSearch.setValue(newValue);
-            if (newValue != null) {
-                ArrayList<db.invoice> i = db.invoice_table.ShowInvoices_ByDate(startDateSearch.getValue(), newValue);
-                memberSeeUpdateTable.getItems().clear();
-                memberSeeUpdateTable.getItems().addAll(i);
-                memberSeeUpdateTable.refresh();
-            } else {
-                ArrayList<db.invoice> i = db.invoice_table.ShowInvoices();
-                memberSeeUpdateTable.getItems().clear();
-                memberSeeUpdateTable.getItems().addAll(i);
-                memberSeeUpdateTable.refresh();
-            }
+		txtFieldSearchByName.textProperty().addListener((observable, oldValue, newValue) -> {
+			startDateSearch.setValue(null);
+			endDateSearch.setValue(null);
+			txtFieldSearchByName.setText(newValue);
+			if (newValue != null) {
+				ArrayList<db.invoice> i = db.invoice_table.ShowInvoices_ByNames(newValue);
+				memberSeeUpdateTable.getItems().clear();
+				memberSeeUpdateTable.getItems().addAll(i);
+				memberSeeUpdateTable.refresh();
+			} else {
+				ArrayList<db.invoice> i = db.invoice_table.ShowInvoices();
+				memberSeeUpdateTable.getItems().clear();
+				memberSeeUpdateTable.getItems().addAll(i);
+				memberSeeUpdateTable.refresh();
+			}
+		});
 
-        });
+		endDateSearch.valueProperty().addListener((observable, oldValue, newValue) -> {
+			txtFieldSearchByName.clear();
+			endDateSearch.setValue(newValue);
+			if (newValue != null) {
+				ArrayList<db.invoice> i = db.invoice_table.ShowInvoices_ByDate(startDateSearch.getValue(), newValue);
+				memberSeeUpdateTable.getItems().clear();
+				memberSeeUpdateTable.getItems().addAll(i);
+				memberSeeUpdateTable.refresh();
+			} else {
+				ArrayList<db.invoice> i = db.invoice_table.ShowInvoices();
+				memberSeeUpdateTable.getItems().clear();
+				memberSeeUpdateTable.getItems().addAll(i);
+				memberSeeUpdateTable.refresh();
+			}
 
-        startDateSearch.valueProperty().addListener((observable, oldValue, newValue) -> {
-            txtFieldSearchByName.clear();
-            startDateSearch.setValue(newValue);
-            if (newValue != null) {
-                ArrayList<db.invoice> i = db.invoice_table.ShowInvoices_ByDate(newValue, endDateSearch.getValue());
-                memberSeeUpdateTable.getItems().clear();
-                memberSeeUpdateTable.getItems().addAll(i);
-                memberSeeUpdateTable.refresh();
-            } else {
-                ArrayList<db.invoice> i = db.invoice_table.ShowInvoices();
-                memberSeeUpdateTable.getItems().clear();
-                memberSeeUpdateTable.getItems().addAll(i);
-                memberSeeUpdateTable.refresh();
-            }
+		});
 
-        });
+		startDateSearch.valueProperty().addListener((observable, oldValue, newValue) -> {
+			txtFieldSearchByName.clear();
+			startDateSearch.setValue(newValue);
+			if (newValue != null) {
+				ArrayList<db.invoice> i = db.invoice_table.ShowInvoices_ByDate(newValue, endDateSearch.getValue());
+				memberSeeUpdateTable.getItems().clear();
+				memberSeeUpdateTable.getItems().addAll(i);
+				memberSeeUpdateTable.refresh();
+			} else {
+				ArrayList<db.invoice> i = db.invoice_table.ShowInvoices();
+				memberSeeUpdateTable.getItems().clear();
+				memberSeeUpdateTable.getItems().addAll(i);
+				memberSeeUpdateTable.refresh();
+			}
 
-        invoiceId.setCellValueFactory(new PropertyValueFactory<>("Iid"));
+		});
 
-        memberId.setCellValueFactory(new PropertyValueFactory<>("id"));
+		invoiceId.setCellValueFactory(new PropertyValueFactory<>("Iid"));
 
-        memberName.setCellValueFactory(new PropertyValueFactory<>("name"));
+		memberId.setCellValueFactory(new PropertyValueFactory<>("id"));
 
-        email.setCellValueFactory(new PropertyValueFactory<>("email"));
+		memberName.setCellValueFactory(new PropertyValueFactory<>("name"));
 
-        packageMonth.setCellValueFactory(new PropertyValueFactory<>("membership_name"));
+		email.setCellValueFactory(new PropertyValueFactory<>("email"));
 
-        purchaseDate.setCellValueFactory(new PropertyValueFactory<>("invoice_date"));
+		packageMonth.setCellValueFactory(new PropertyValueFactory<>("membership_name"));
 
-        endDate.setCellValueFactory(new PropertyValueFactory<>("end"));
-        
-        adminName.setCellValueFactory(new PropertyValueFactory<>(""));
+		purchaseDate.setCellValueFactory(new PropertyValueFactory<>("invoice_date"));
 
-        ArrayList<db.invoice> a = db.invoice_table.ShowInvoices();
+		endDate.setCellValueFactory(new PropertyValueFactory<>("end"));
 
-        memberSeeUpdateTable.getItems().addAll(a);
+		adminName.setCellValueFactory(new PropertyValueFactory<>("admin_name"));
+
+		ArrayList<db.invoice> a = db.invoice_table.ShowInvoices();
+
+		memberSeeUpdateTable.getItems().addAll(a);
 
 //        memberSeeUpdateTable.setItems(list);
-        MemberSignUpController memSignUpControll = new MemberSignUpController();
-        HamburgerBasicCloseTransition burgerTask = new HamburgerBasicCloseTransition(adminMenu);
-        burgerTask.setRate(-1);
-        adminMenu.setOnMousePressed((event1) -> {
-            try {
-                adminDrawer.setSidePane(memSignUpControll.adminMenuScene(titleRecordTrainerAtt.getText()));
-            } catch (IOException ex) {
-                Logger.getLogger(SeeAndUpdateMemberDataController.class.getName()).log(Level.SEVERE, null, ex);
-            }
+		MemberSignUpController memSignUpControll = new MemberSignUpController();
+		HamburgerBasicCloseTransition burgerTask = new HamburgerBasicCloseTransition(adminMenu);
+		burgerTask.setRate(-1);
+		adminMenu.setOnMousePressed((event1) -> {
+			try {
+				adminDrawer.setSidePane(memSignUpControll.adminMenuScene(titleRecordTrainerAtt.getText()));
+			} catch (IOException ex) {
+				Logger.getLogger(SeeAndUpdateMemberDataController.class.getName()).log(Level.SEVERE, null, ex);
+			}
 
-        });
-        adminMenu.setOnMouseReleased((event1) -> {
-            burgerTask.setRate(burgerTask.getRate() * -1);
-            burgerTask.play();
+		});
+		adminMenu.setOnMouseReleased((event1) -> {
+			burgerTask.setRate(burgerTask.getRate() * -1);
+			burgerTask.play();
 
-            if (adminDrawer.isShown()) {
-                adminDrawer.close();
-            } else {
-                adminDrawer.open();
-            }
-        });
-    }
+			if (adminDrawer.isShown()) {
+				adminDrawer.close();
+			} else {
+				adminDrawer.open();
+			}
+		});
+	}
 
 }

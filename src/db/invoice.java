@@ -57,6 +57,15 @@ public class invoice extends Member {
         this.invoice_date = invoice_date;
         this.membership_name = membership_name;
     }
+    
+    public invoice(String Iid, LocalDate invoice_date, LocalDate end, String membership_name, String id, String name, String email, String adminName) {
+        super(id, name, email);
+        this.Iid = Iid;
+        this.end = end;
+        this.invoice_date = invoice_date;
+        this.membership_name = membership_name;
+        this.admin_name = adminName;
+    }
 
     public invoice(String Iid, LocalDate invoice_date, LocalDate end, String membership_name, String id, String name, String email, String adminName, String price) {
         super(id, name, email);

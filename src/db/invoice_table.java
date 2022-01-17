@@ -158,14 +158,14 @@ public class invoice_table {
     public static ArrayList<invoice> ShowInvoices() {
         ArrayList<invoice> i = new ArrayList<>();
 
-        String sql = "SELECT * FROM `invoice` , member , membership  WHERE invoice.member_id=member.id and invoice.membership_id=membership.membership_id order by invoice.id desc ";
+        String sql = "SELECT *, admin.name AS adminName FROM `invoice` JOIN admin ON invoice.admin_id = admin.id , member , membership  WHERE invoice.member_id=member.id and invoice.membership_id=membership.membership_id order by invoice.id desc;";
         try (Connection con = ConnectDB.CreateConnection();
                 PreparedStatement ps = con.prepareStatement(sql)) {
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
 
-                i.add(new invoice(rs.getString("invoice.id"), rs.getDate("invoice_date").toLocalDate(), rs.getDate("invoice.end_date").toLocalDate(), rs.getString("membership.membership_name"), rs.getString("member.id"), rs.getString("member.name"), rs.getString("member.email")));
+                i.add(new invoice(rs.getString("invoice.id"), rs.getDate("invoice_date").toLocalDate(), rs.getDate("invoice.end_date").toLocalDate(), rs.getString("membership.membership_name"), rs.getString("member.id"), rs.getString("member.name"), rs.getString("member.email"), rs.getString("adminName")));
                 System.err.println(rs.getString("member.id"));
             }
 

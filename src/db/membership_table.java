@@ -48,13 +48,14 @@ public class membership_table {
     }
 
     public static void insert_membership(Membership ms) {
-        String sql = "insert  into membership(membership_name,price) values (?,?) ";
+        String sql = "insert into membership values (?,?,?) ";
 
         try (Connection con = ConnectDB.CreateConnection();
                 PreparedStatement ps = con.prepareStatement(sql)) {
 
-            ps.setString(1, ms.getName());
-            ps.setInt(2, ms.getPrice());
+        	ps.setString(1, ms.getId());
+            ps.setString(2, ms.getName());
+            ps.setInt(3, ms.getPrice());
 
             ps.execute();
             System.out.println("added  member ship");

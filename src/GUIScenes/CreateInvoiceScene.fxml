@@ -31,8 +31,6 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="246.0" layoutX="1209.0" layoutY="-73.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="261.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="246.0" layoutX="-23.0" layoutY="364.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="226.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="342.0" layoutX="66.0" layoutY="499.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="211.0" />
-      <JFXDrawer fx:id="adminDrawer" layoutY="96.0" prefHeight="350.0" prefWidth="180.0" />
-      <JFXHamburger fx:id="adminMenu" layoutX="21.0" layoutY="50.0" />
       <TableView fx:id="memberSeeUpdateTable" editable="true" layoutX="97.0" layoutY="175.0" prefHeight="421.0" prefWidth="681.0" style="-fx-selection-bar: #35ae50;">
          <columns>
             <TableColumn fx:id="id" prefWidth="107.00006103515625" text="Id" />
@@ -139,5 +137,7 @@
             <Font size="15.0" />
          </font>
       </Text>
+      <JFXDrawer fx:id="adminDrawer" layoutY="96.0" prefHeight="350.0" prefWidth="180.0" />
+      <JFXHamburger fx:id="adminMenu" layoutX="21.0" layoutY="50.0" />
    </children>
 </AnchorPane>

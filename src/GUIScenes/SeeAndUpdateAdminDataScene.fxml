@@ -22,7 +22,6 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="429.0" layoutX="-102.0" layoutY="58.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="584.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="318.0" layoutX="-102.0" layoutY="280.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="419.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="377.0" layoutX="196.0" layoutY="456.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="480.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="190.0" layoutX="1238.0" layoutY="481.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="226.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="190.0" layoutX="746.0" layoutY="642.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="571.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="362.0" layoutX="679.0" layoutY="132.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="489.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="237.0" layoutX="959.0" layoutY="-33.0" stroke="#ffbb00" strokeType="INSIDE" strokeWidth="3.0" width="295.0" />
@@ -117,12 +116,12 @@
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Text fx:id="invalidPass" fill="RED" layoutX="1094.0" layoutY="366.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password must be greater than 8 and less than 20" textAlignment="CENTER" wrappingWidth="162.3603364378214">
+      <Text fx:id="invalidPass" fill="RED" layoutX="1094.0" layoutY="350.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password must be greater than 8 and less than 20" textAlignment="CENTER" wrappingWidth="124.0000157430768">
          <font>
             <Font size="15.0" />
          </font>
       </Text>
-      <Text fx:id="tooWeakPass" fill="RED" layoutX="634.0" layoutY="366.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password must contain at least 1 number, 1 uppercase letter, 1 lowercase letter and not space" textAlignment="CENTER" wrappingWidth="180.00000143051147">
+      <Text fx:id="tooWeakPass" fill="RED" layoutX="675.0" layoutY="350.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password must contain at least 1 number, 1 uppercase letter, 1 lowercase letter and not space" textAlignment="CENTER" wrappingWidth="139.3603354971856">
          <font>
             <Font size="15.0" />
          </font>
@@ -148,17 +147,17 @@
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <Rectangle fx:id="titleTemplate1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="108.0" layoutY="37.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
+      <Rectangle fx:id="titleTemplate1" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="50.0" layoutX="147.0" layoutY="37.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="500.0">
          <effect>
             <DropShadow blurType="GAUSSIAN" color="#ffbb00" offsetX="3.0" offsetY="3.0" />
          </effect>
       </Rectangle>
-      <Text fx:id="titleTrainerSignUp1" layoutX="243.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Data" textAlignment="CENTER" wrappingWidth="229.3603515625">
+      <Text fx:id="titleTrainerSignUp1" layoutX="282.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Admin Data" textAlignment="CENTER" wrappingWidth="229.3603515625">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <TableView fx:id="adminTable" layoutX="51.0" layoutY="191.0" prefHeight="373.0" prefWidth="614.0">
+      <TableView fx:id="adminTable" layoutX="90.0" layoutY="190.0" prefHeight="373.0" prefWidth="614.0">
         <columns>
           <TableColumn fx:id="idCol" prefWidth="96.0" text="Admin ID" />
           <TableColumn fx:id="nameCol" prefWidth="129.0" text="Admin Name" />
@@ -167,17 +166,17 @@
             <TableColumn fx:id="statusCol" minWidth="12.0" prefWidth="82.0" text="Status" />
         </columns>
       </TableView>
-      <JFXTextField fx:id="txtFieldSearchById" focusColor="BLACK" labelFloat="true" layoutX="108.0" layoutY="131.0" prefHeight="37.0" prefWidth="211.0" promptText="Search by id" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtFieldSearchById" focusColor="BLACK" labelFloat="true" layoutX="147.0" layoutY="130.0" prefHeight="37.0" prefWidth="211.0" promptText="Search by id" unFocusColor="BLACK">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXTextField fx:id="txtFieldSearchByName" focusColor="BLACK" labelFloat="true" layoutX="397.0" layoutY="131.0" prefHeight="37.0" prefWidth="211.0" promptText="Search by name" unFocusColor="BLACK">
+      <JFXTextField fx:id="txtFieldSearchByName" focusColor="BLACK" labelFloat="true" layoutX="436.0" layoutY="130.0" prefHeight="37.0" prefWidth="211.0" promptText="Search by name" unFocusColor="BLACK">
          <font>
             <Font size="15.0" />
          </font>
       </JFXTextField>
-      <JFXButton fx:id="updateTableButton" buttonType="RAISED" layoutX="565.0" layoutY="594.0" prefHeight="40.0" prefWidth="100.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Update" textFill="WHITE">
+      <JFXButton fx:id="updateTableButton" buttonType="RAISED" layoutX="604.0" layoutY="593.0" prefHeight="40.0" prefWidth="100.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Update" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font>

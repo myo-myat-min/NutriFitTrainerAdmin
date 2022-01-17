@@ -17,9 +17,17 @@ import java.io.Reader;
 import java.net.Proxy;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import db.ConnectDB;
+import db.CreateDB;
+import db.CreateDatabaseAndTables;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -85,6 +93,21 @@ public class Main extends Application {
 		} catch (Exception e) {
 
 		}
+//		CREATE DATABASE IF NOT EXISTS DBName;
+//		String checkDB = "CREATE DATABASE IF NOT EXISTS Nutri_Fit_Trainer_Admin;";
+//		
+//		try (Connection con = CreateDB.createConnection();
+//                PreparedStatement ps = con.prepareStatement(checkDB);
+//                		) {
+//			System.out.println(ps.execute());
+//			if(!ps.execute()) {
+//				CreateDatabaseAndTables create = new CreateDatabaseAndTables();
+//				create.createDBAndTables();
+//			} 
+            
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
 		Parent memberSignUpScene = FXMLLoader.load(getClass().getResource("TrainerAdminSignInScene.fxml"));
 		Scene scene = new Scene(memberSignUpScene);
