@@ -147,7 +147,7 @@ public class CreateInvoiceController implements Initializable {
     
     private db.invoice selected;
     private ArrayList<db.Membership> ms = db.membership_table.showall();
-    private Member m = new Member();
+    private static Member m = new Member();
     private LocalDate enddate = LocalDate.now();
     ObservableList list = FXCollections.observableArrayList(
 //            new CreateInvoiceTestMember(1, "Mg Soe", "2 month package", "13/UKM(N)256954", LocalDate.now()),
@@ -337,6 +337,17 @@ public class CreateInvoiceController implements Initializable {
         ArrayList<db.invoice> m = db.Membertable.Member_ForCreatingInvoices();
         memberSeeUpdateTable.getItems().addAll(m);
         
+
+        memberSeeUpdateTable.setOnMouseClicked(event ->  {
+            selected = memberSeeUpdateTable.getSelectionModel().getSelectedItem();
+            if(selected != null){
+                memberName.setText(selected.getName());
+                CreateInvoiceController.m.setId(selected.getMember_id());
+            } else {
+                new Alert(AlertType.ERROR, "Please select a row", ButtonType.OK).showAndWait();
+            }
+            
+          });
     }
     
     @FXML
