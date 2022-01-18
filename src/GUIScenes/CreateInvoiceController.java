@@ -192,6 +192,10 @@ public class CreateInvoiceController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 //        memberName.setText("Hello");
+
+    dateInvoice.setText("Date:"+LocalDate.now().toString());
+   
+
         ms.forEach((t) -> {
             packageChoice.getItems().add(t.getName());
         });
