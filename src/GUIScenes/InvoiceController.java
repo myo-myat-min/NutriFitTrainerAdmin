@@ -158,8 +158,6 @@ public class InvoiceController implements Initializable {
                 Parent trainerSignUpScene = FXMLLoader.load(getClass().getResource("InvoicePrintScene.fxml"));
                 Scene scene = new Scene(trainerSignUpScene);
                 Stage window = new Stage();
-                window.setWidth(495);
-                window.setHeight(690);
                 window.setResizable(false);
                 window.centerOnScreen();
                 window.setScene(scene);
