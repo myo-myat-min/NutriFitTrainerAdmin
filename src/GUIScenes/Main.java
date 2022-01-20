@@ -20,6 +20,7 @@ import java.net.Socket;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -108,6 +109,24 @@ public class Main extends Application {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
+		
+		ArrayList<String> databaseNames = new ArrayList<>();
+		CreateDatabaseAndTables createDBAndTables = new CreateDatabaseAndTables();
+		Connection con = CreateDB.createConnection();
+		try {
+			ResultSet rs = con.getMetaData().getCatalogs();
+			while (rs.next()) {
+
+				String catalogs = rs.getString(1);
+				databaseNames.add(catalogs);
+			}
+		} catch (SQLException ex) {
+			ex.printStackTrace();
+		}
+		
+		if (!databaseNames.contains("nutri_fit")) {
+			createDBAndTables.createDBAndTables();
+		}
 
 		Parent memberSignUpScene = FXMLLoader.load(getClass().getResource("TrainerAdminSignInScene.fxml"));
 		Scene scene = new Scene(memberSignUpScene);
