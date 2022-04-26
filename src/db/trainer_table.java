@@ -26,7 +26,7 @@ public class trainer_table {
     public static void create_table() {
 
         String sql = "Create table trainer("
-                + " id  varchar(50) Primary key   ,"
+                + " id varchar(50) Primary key   ,"
                 + "name  Varchar(50) NOT NULL,"
                 + "password Varchar(50) NOT  NULL ,"
                 + "dob Date NOT NULL,"
@@ -36,7 +36,7 @@ public class trainer_table {
                 + "phone_no Varchar(50),"
                 + "address Varchar(50),"
                 + "status Varchar(10) not null , "
-                + "fees int(100)   not null  );";
+                + "fees INT   not null  );";
 
         try (Connection con = ConnectDB.CreateConnection();
                 PreparedStatement ps = con.prepareStatement(sql)) {
