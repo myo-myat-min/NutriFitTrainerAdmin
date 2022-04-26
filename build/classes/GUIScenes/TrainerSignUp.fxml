@@ -131,6 +131,11 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
+      <JFXTextField fx:id="fees" focusColor="BLACK" labelFloat="true" layoutX="504.0" layoutY="442.0" onAction="#feesAction" prefHeight="37.0" prefWidth="250.0" promptText="Fees" unFocusColor="BLACK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </JFXTextField>
       <JFXTextArea fx:id="address" focusColor="BLACK" labelFloat="true" layoutX="799.0" layoutY="221.0" prefHeight="101.0" prefWidth="397.0" promptText="Address">
          <font>
             <Font size="15.0" />
@@ -182,11 +187,6 @@
             <Font name="System Bold" size="11.0" />
          </font>
       </Text>
-      <JFXTextField fx:id="fees" focusColor="BLACK" labelFloat="true" layoutX="504.0" layoutY="442.0" onAction="#feesAction" prefHeight="37.0" prefWidth="250.0" promptText="Fees" unFocusColor="BLACK">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </JFXTextField>
       <JFXDrawer fx:id="adminDrawer" layoutY="96.0" prefHeight="350.0" prefWidth="180.0" />
       <JFXHamburger fx:id="adminMenu" layoutX="21.0" layoutY="50.0" />
    </children>

@@ -19,8 +19,8 @@ public class attendance_table {
      
      public static void create_table(){
          String sql="Create table attendance("
-                 + "id int(100) primary key auto_increment ,"
-                 + "attendance date not null UNIQUE )";
+                 + "id int primary key auto_increment,"
+                 + "attendance date not null)";
          try (Connection con=ConnectDB.CreateConnection();
                  PreparedStatement ps=con.prepareStatement(sql)){
              

@@ -23,9 +23,9 @@ public class membership_table {
     public static void create_membership_table() {
 
         String sql = "Create table Membership("
-                + "membership_id varchar(50) primary key ,"
-                + "membership_name  varchar(50)  not null,"
-                + "price  int(50)  not null) ; ";
+                + "membership_id varchar(50) primary key,"
+                + "membership_name varchar(50) not null,"
+                + "price int not null); ";
         try (Connection con = ConnectDB.CreateConnection();
                 Statement s = con.createStatement()) {
             s.execute(sql);

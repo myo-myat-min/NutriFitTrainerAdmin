@@ -27,18 +27,18 @@ public class Membertable {
     public static void CreateTable() {
 
         String sql = "CREATE TABLE Member("
-                + "id  varchar(50) Primary key   , "
-                + "name  Varchar(50) NOT NULL, "
-                + "password Varchar(50) NOT  NULL ,  "
+                + "id varchar(50) Primary key,"
+                + "name Varchar(50) NOT NULL,"
+                + "password Varchar(50) NOT NULL,"
                 + "dob Date NOT NULL,"
                 + "gender Varchar(6) NOT NULL,"
                 + "weight Int NOT NULL,"
-                + "height Int  NOT NULL,"
+                + "height Int NOT NULL,"
                 + "email Varchar(50) not null Unique,"
                 + "nrc Varchar(50) NOT NULL Unique,"
-                + "phone_no Varchar(50),"
-                + "address Varchar(100) NOT NULL,"
-                + "medical_data Varchar(100) );";
+                + "phone_no Varchar(50) NOT NULL,"
+                + "address Varchar(150) NOT NULL,"
+                + "medical_data Varchar(150) );";
         try (Connection con = ConnectDB.CreateConnection();
                 PreparedStatement ps = con.prepareStatement(sql)) {
             ps.execute();

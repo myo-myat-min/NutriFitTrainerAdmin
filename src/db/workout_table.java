@@ -22,14 +22,14 @@ public class workout_table {
     public static void create_table() {
 
         String sql = "Create table workout("
-                + "id int(50) primary key auto_increment ,"
-                + "name varchar(50) not null ,"
-                + "video varchar(60) not null ,"
-                + "burnt_calorie float not null , "
-                + "workout_type varchar(15) , "
-                + "effected_muscle varchar(40) ,"
-                + "trainer_id  varchar(50) not null ,"
-                + "image longblob ,"
+                + "id int primary key auto_increment,"
+                + "name varchar(50) not null,"
+                + "video varchar(100) not null,"
+                + "burnt_calorie float not null, "
+                + "workout_type varchar(15) not null, "
+                + "effected_muscle varchar(40) not null,"
+                + "trainer_id  varchar(50) not null,"
+                + "image longblob not null,"
                 + "FOREIGN KEY (`TRAINER_ID`) REFERENCES `trainer`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE)";
         try (Connection con = ConnectDB.CreateConnection();
                 PreparedStatement ps = con.prepareStatement(sql)) {

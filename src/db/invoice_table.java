@@ -25,13 +25,13 @@ public class invoice_table {
 
         String sql = "create table invoice("
                 + "id varchar(50) primary key ,"
-                + "invoice_date date  not null ,"
+                + "invoice_date date not null ,"
                 + "end_date date not null ,"
-                + "member_id  varchar(50) not null ,  "
-                + " membership_id  varchar(50) not null,"
-                + "admin_id  varchar(50)  not null ,"
-                + " FOREIGN KEY (`MEMBER_ID`) REFERENCES `member`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE,"
-                + " FOREIGN KEY (`MEMBERSHIP_ID`) REFERENCES `membership`(`membership_id`)  ON UPDATE CASCADE ON DELETE CASCADE,"
+                + "member_id varchar(50) not null ,  "
+                + "membership_id varchar(50) not null,"
+                + "admin_id varchar(50) not null ,"
+                + "FOREIGN KEY (`MEMBER_ID`) REFERENCES `member`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE,"
+                + "FOREIGN KEY (`MEMBERSHIP_ID`) REFERENCES `membership`(`membership_id`)  ON UPDATE CASCADE ON DELETE CASCADE,"
                 + "FOREIGN KEY (`ADMIN_ID`) REFERENCES `admin`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE);";
 
         try (Connection con = ConnectDB.CreateConnection();

@@ -20,9 +20,9 @@ public class schedule_table {
 
     public static void create_table() {
         String sql = "Create table Schedule("
-                + "id varchar(50) primary key  ,"
-                + "schedule_date Date  not null ,"
-                + "content varchar(100) not null ,"
+                + "id varchar(50) primary key,"
+                + "schedule_date Date not null,"
+                + "content varchar(150) not null ,"
                 + "trainer_id varchar(50) not null,"
                 + "FOREIGN KEY (`TRAINER_ID`) REFERENCES `trainer`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE);";
         try (Connection con = ConnectDB.CreateConnection();

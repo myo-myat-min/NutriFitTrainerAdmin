@@ -30,15 +30,14 @@ public class DailyAttendancetable {
     public static void create_table() {
 
         String sql = "Create table dailyattendance("
-                + "id  int primary key auto_increment,"
+                + "id int primary key auto_increment,"
                 + "attend varchar(10) not null,"
                 + "arrive_time time, "
                 + "note varchar(50),"
                 + "trainer_id varchar(50) not null,"
                 + "attendance_id int not null,"
                 + "FOREIGN KEY (`TRAINER_ID`) REFERENCES `trainer`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE,"
-                + "FOREIGN KEY (`ATTENDANCE_ID`) REFERENCES `attendance`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE,"
-                + "UNIQUE( `trainer_id`, `attendance_id`)   );";
+                + "FOREIGN KEY (`ATTENDANCE_ID`) REFERENCES `attendance`(`id`)  ON UPDATE CASCADE ON DELETE CASCADE);";
 
         try (Connection con = ConnectDB.CreateConnection();
                 PreparedStatement ps = con.prepareStatement(sql)) {

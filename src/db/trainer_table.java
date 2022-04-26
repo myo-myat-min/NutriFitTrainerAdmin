@@ -26,17 +26,17 @@ public class trainer_table {
     public static void create_table() {
 
         String sql = "Create table trainer("
-                + " id varchar(50) Primary key   ,"
-                + "name  Varchar(50) NOT NULL,"
-                + "password Varchar(50) NOT  NULL ,"
+                + "id varchar(50) Primary key,"
+                + "name Varchar(50) NOT NULL,"
+                + "password Varchar(50) NOT NULL ,"
                 + "dob Date NOT NULL,"
-                + "gender Varchar(6) NOT NULL Unique,"
-                + "email Varchar(50) , "
+                + "gender Varchar(6) NOT NULL,"
+                + "email Varchar(50) NOT NULL Unique, "
                 + "nrc Varchar(50) NOT NULL Unique,"
-                + "phone_no Varchar(50),"
-                + "address Varchar(50),"
-                + "status Varchar(10) not null , "
-                + "fees INT   not null  );";
+                + "phone_no Varchar(50) NOT NULL,"
+                + "address Varchar(150) NOT NULL,"
+                + "status Varchar(20) not null, "
+                + "fees INT not null );";
 
         try (Connection con = ConnectDB.CreateConnection();
                 PreparedStatement ps = con.prepareStatement(sql)) {
