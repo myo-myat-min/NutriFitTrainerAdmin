@@ -7,6 +7,7 @@
             <file>file:/C:/NutriFit/NutriFitTrainerAdmin/src/GUIScenes/SetWorkoutController.java</file>
             <file>file:/C:/NutriFit/NutriFitTrainerAdmin/src/GUIScenes/MonthlyReportController.java</file>
             <file>file:/C:/NutriFit/NutriFitTrainerAdmin/src/GUIScenes/UpdateWorkoutController.java</file>
+            <file>file:/C:/NutriFit/NutriFitTrainerAdmin/src/GUIScenes/MainWorkoutController.java</file>
             <file>file:/C:/NutriFit/NutriFitTrainerAdmin/src/db/CreateDatabaseAndTables.java</file>
             <file>file:/C:/NutriFit/NutriFitTrainerAdmin/src/GUIScenes/GainWeightWorkoutController.java</file>
             <file>file:/C:/NutriFit/NutriFitTrainerAdmin/src/GUIScenes/Main.java</file>
@@ -16,6 +17,8 @@
             <file>file:/C:/NutriFit/NutriFitTrainerAdmin/src/GUIScenes/AdminUpdateSaveController.java</file>
             <file>file:/C:/NutriFit/NutriFitTrainerAdmin/src/GUIScenes/CreateInvoiceScene.fxml</file>
             <file>file:/C:/NutriFit/NutriFitTrainerAdmin/src/GUIScenes/MonthlyReportPrintController.java</file>
+            <file>file:/C:/NutriFit/NutriFitTrainerAdmin/src/GUIScenes/InvoiceHistoryController.java</file>
+            <file>file:/C:/NutriFit/NutriFitTrainerAdmin/src/db/invoice_table.java</file>
             <file>file:/C:/NutriFit/NutriFitTrainerAdmin/src/GUIScenes/CreateInvoiceController.java</file>
         </group>
     </open-files>

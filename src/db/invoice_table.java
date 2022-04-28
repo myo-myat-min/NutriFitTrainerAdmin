@@ -180,15 +180,17 @@ public class invoice_table {
     public static ArrayList<invoice> ShowInvoices_ByNames(String name) {
         ArrayList<invoice> i = new ArrayList<>();
 
-        String sql = "SELECT * FROM `invoice` , member , membership  WHERE invoice.member_id=member.id and invoice.membership_id=membership.membership_id and member.name like ? order by invoice.id desc ";
+        String sql = "SELECT * FROM `invoice` , member , membership  ,admin WHERE invoice.admin_id=admin.id and invoice.member_id=member.id and invoice.membership_id=membership.membership_id and member.name like ? order by invoice.id desc ";
         try (Connection con = ConnectDB.CreateConnection();
                 PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setString(1, "%" + name + "%");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
 
-                i.add(new invoice(rs.getString("invoice.id"), rs.getDate("invoice.end_date").toLocalDate(), rs.getDate("invoice_date").toLocalDate(), rs.getString("membership.membership_name"), rs.getString("member.id"), rs.getString("member.name"), rs.getString("member.email")));
-                System.err.println(rs.getString("member.id"));
+               // i.add(new invoice(rs.getString("invoice.id"), rs.getDate("invoice.end_date").toLocalDate(), rs.getDate("invoice_date").toLocalDate(), rs.getString("membership.membership_name"), rs.getString("member.id"), rs.getString("member.name"), rs.getString("member.email")));
+            i.add(new invoice(rs.getString("invoice.id"), rs.getDate("invoice_date").toLocalDate(), rs.getDate("invoice.end_date").toLocalDate(), rs.getString("membership.membership_name"), rs.getString("member.id"), rs.getString("member.name"), rs.getString("member.email"), rs.getString("admin.name")));
+                System.out.println(new invoice(rs.getString("invoice.id"), rs.getDate("invoice_date").toLocalDate(), rs.getDate("invoice.end_date").toLocalDate(), rs.getString("membership.membership_name"), rs.getString("member.id"), rs.getString("member.name"), rs.getString("member.email"), rs.getString("admin.name")));
+               System.err.println(rs.getString("member.id"));
             }
 
             return i;
@@ -208,7 +210,7 @@ public class invoice_table {
             end = LocalDate.now();
         }
 
-        String sql = "SELECT * FROM `invoice` , member , membership  WHERE invoice.member_id=member.id and invoice.membership_id=membership.membership_id and invoice.invoice_date between ? and ?  order by invoice.id desc ";
+        String sql = "SELECT * FROM `invoice` , member , membership ,  admin WHERE invoice.admin_id=admin.id and  invoice.member_id=member.id and invoice.membership_id=membership.membership_id and invoice.invoice_date between ? and ?  order by invoice.id desc ";
         try (Connection con = ConnectDB.CreateConnection();
                 PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setDate(1, Date.valueOf(start));
@@ -216,8 +218,9 @@ public class invoice_table {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
 
-                i.add(new invoice(rs.getString("invoice.id"), rs.getDate("invoice_date").toLocalDate(), rs.getDate("invoice.end_date").toLocalDate(), rs.getString("membership.membership_name"), rs.getString("member.id"), rs.getString("member.name"), rs.getString("member.email")));
-                System.err.println(rs.getString("member.id"));
+             //   i.add(new invoice(rs.getString("invoice.id"), rs.getDate("invoice_date").toLocalDate(), rs.getDate("invoice.end_date").toLocalDate(), rs.getString("membership.membership_name"), rs.getString("member.id"), rs.getString("member.name"), rs.getString("member.email")));
+                  i.add(new invoice(rs.getString("invoice.id"), rs.getDate("invoice_date").toLocalDate(), rs.getDate("invoice.end_date").toLocalDate(), rs.getString("membership.membership_name"), rs.getString("member.id"), rs.getString("member.name"), rs.getString("member.email"), rs.getString("admin.name")));   
+             System.err.println(rs.getString("member.id"));
             }
 
             return i;
