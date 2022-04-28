@@ -69,10 +69,10 @@ import javafx.util.StringConverter;
  * @author ACER
  */
 public class CreateInvoiceController implements Initializable {
-    
+
     private FadeTransition fadeAnimationMember = new FadeTransition();
     private FadeTransition fadeAnimationEmptyNoti = new FadeTransition();
-    
+
     @FXML
     private TableView<db.invoice> memberSeeUpdateTable;
 
@@ -81,10 +81,10 @@ public class CreateInvoiceController implements Initializable {
 
     @FXML
     private TableColumn<db.invoice, String> memberNameCol;
-    
+
     @FXML
     private TableColumn<db.invoice, String> packageMonthCol;
-    
+
     @FXML
     private TableColumn<db.invoice, String> nrcCol;
 
@@ -141,20 +141,18 @@ public class CreateInvoiceController implements Initializable {
 
     @FXML
     private Text emptyNoti;
-    
+
 //    @FXML
 //    private JFXButton printButton;
-    
     private db.invoice selected;
     private ArrayList<db.Membership> ms = db.membership_table.showall();
     private static Member m = new Member();
     private LocalDate enddate = LocalDate.now();
-    ObservableList list = FXCollections.observableArrayList(
-//            new CreateInvoiceTestMember(1, "Mg Soe", "2 month package", "13/UKM(N)256954", LocalDate.now()),
-//            new CreateInvoiceTestMember(1, "Mg Mya", "1 month package", "13/UKM(N)726954", LocalDate.now()),
-//            new CreateInvoiceTestMember(1, "Mg Hla", "4 month package", "13/UKM(N)645954", LocalDate.now())
-    );
-    
+    ObservableList list = FXCollections.observableArrayList( //            new CreateInvoiceTestMember(1, "Mg Soe", "2 month package", "13/UKM(N)256954", LocalDate.now()),
+            //            new CreateInvoiceTestMember(1, "Mg Mya", "1 month package", "13/UKM(N)726954", LocalDate.now()),
+            //            new CreateInvoiceTestMember(1, "Mg Hla", "4 month package", "13/UKM(N)645954", LocalDate.now())
+            );
+
 //    @FXML
 //    void printPressedAction(MouseEvent event) {
 //        Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure to print the data?", ButtonType.YES, ButtonType.NO);
@@ -177,24 +175,34 @@ public class CreateInvoiceController implements Initializable {
 //            event.consume();
 //        }
 //    }
-
     @FXML
     void insertPressedAction(MouseEvent event) {
         selected = memberSeeUpdateTable.getSelectionModel().getSelectedItem();
-        if(selected != null){
+        if (selected != null) {
             memberName.setText(selected.getName());
             m.setId(selected.getMember_id());
         } else {
             new Alert(AlertType.ERROR, "Please select a row", ButtonType.OK).showAndWait();
         }
     }
-    
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 //        memberName.setText("Hello");
 
-    dateInvoice.setText("Date:"+LocalDate.now().toString());
-   
+        dateInvoice.setText("Date:" + LocalDate.now().toString());
+        
+        
+        memberSeeUpdateTable.setOnMouseClicked(event -> {
+            selected = memberSeeUpdateTable.getSelectionModel().getSelectedItem();
+            if (selected != null) {
+                memberName.setText(selected.getName());
+                CreateInvoiceController.m.setId(selected.getMember_id());
+            } else {
+                new Alert(AlertType.ERROR, "Please select a row", ButtonType.OK).showAndWait();
+            }
+
+        });
 
         ms.forEach((t) -> {
             packageChoice.getItems().add(t.getName());
@@ -205,12 +213,12 @@ public class CreateInvoiceController implements Initializable {
             txtFieldSearchByName.clear();
             txtFieldSearchById.setText(nv);
         });
-        
+
         txtFieldSearchByName.textProperty().addListener((ob, ov, nv) -> {
             txtFieldSearchById.clear();
             txtFieldSearchByName.setText(nv);
         });
-        
+
         txtFieldSearchById.textProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
             if (!newValue.isEmpty()) {
 
@@ -229,7 +237,7 @@ public class CreateInvoiceController implements Initializable {
 
             }
         });
-        
+
         txtFieldSearchByName.textProperty().addListener((ObservableValue<? extends String> observable, String oldValue, String newValue) -> {
             if (!newValue.isEmpty()) {
 
@@ -250,17 +258,16 @@ public class CreateInvoiceController implements Initializable {
         });
 
         id.setCellValueFactory(new PropertyValueFactory<>("member_id"));
-        
+
         memberNameCol.setCellValueFactory(new PropertyValueFactory<>("name"));
-        
+
         packageMonthCol.setCellValueFactory(new PropertyValueFactory<>("membership_name"));
-        
+
         nrcCol.setCellValueFactory(new PropertyValueFactory<>("nrc"));
-        
+
         endDateCol.setCellValueFactory(new PropertyValueFactory<>("end"));
-        
+
 //        memberSeeUpdateTable.setItems(list);
-        
 //        updateButton.setOnAction((event) -> {
 //            
 //            if (!memberName.getText().isEmpty()) {
@@ -337,23 +344,16 @@ public class CreateInvoiceController implements Initializable {
                 adminDrawer.open();
             }
         });
-        
+
         ArrayList<db.invoice> m = db.Membertable.Member_ForCreatingInvoices();
         memberSeeUpdateTable.getItems().addAll(m);
         
-
-        memberSeeUpdateTable.setOnMouseClicked(event ->  {
-            selected = memberSeeUpdateTable.getSelectionModel().getSelectedItem();
-            if(selected != null){
-                memberName.setText(selected.getName());
-                CreateInvoiceController.m.setId(selected.getMember_id());
-            } else {
-                new Alert(AlertType.ERROR, "Please select a row", ButtonType.OK).showAndWait();
-            }
-            
-          });
+        
+        
+        
+        
     }
-    
+
     @FXML
     void updatePressedAction(MouseEvent event) {
         if (!memberName.getText().isEmpty()) {
@@ -362,7 +362,7 @@ public class CreateInvoiceController implements Initializable {
 
             if (alert.getResult() == ButtonType.YES) {
                 ms.forEach((t) -> {
-                    
+
                     if (t.getName().equals(packageChoice.getSelectionModel().getSelectedItem())) {
                         String[] s = t.getName().split("-");
                         System.out.println(s[0]);
@@ -413,7 +413,7 @@ public class CreateInvoiceController implements Initializable {
         fadeAnimationItems(fadeAnimationMember);
         fadeAnimationItems(fadeAnimationEmptyNoti);
     }
-    
+
     public void fadeAnimationItems(FadeTransition fadeAnimation) {
         fadeAnimation.setDuration(Duration.millis(4000));
         fadeAnimation.setCycleCount(1);
@@ -421,14 +421,14 @@ public class CreateInvoiceController implements Initializable {
         fadeAnimation.setFromValue(1);
         fadeAnimation.setToValue(0);
     }
-    
+
     public void memberCondition() {
         if (memberName.getText().isEmpty()) {
             fadeAnimationMember.setNode(nameCircle);
             fadeAnimationMember.play();
         }
     }
-    
+
     public void emptyNotiMethod() {
         fadeAnimationEmptyNoti.setNode(emptyNoti);
         fadeAnimationEmptyNoti.play();

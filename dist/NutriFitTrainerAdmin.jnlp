@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="NutriFitTrainerAdmin.jar" size="431121" download="eager" />
+    <jar href="NutriFitTrainerAdmin.jar" size="433318" download="eager" />
     <jar href="lib\jfoenix-8.0.2.jar" size="2442326" download="eager" />
     <jar href="lib\mail.jar" size="666983" download="eager" />
     <jar href="lib\mysql-connector-java-5.1.18.jar" size="789885" download="eager" />

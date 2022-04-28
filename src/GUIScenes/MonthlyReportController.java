@@ -102,7 +102,6 @@ public class MonthlyReportController implements Initializable {
 //            new MonthlyReportTrainer("Mg Mg2", 5, 3, 90000),
 //            new MonthlyReportTrainer("Mg Mg3", 5, 3, 90000)
 //    );
-
     @FXML
     private Text dateMonthlyReport;
 
@@ -129,29 +128,29 @@ public class MonthlyReportController implements Initializable {
 
     @FXML
     private JFXButton printButton;
-    
+
     @FXML
     private JFXTextField txtfieldFinePerMinute;
 
     @FXML
     private JFXTextField txtfieldFinePerDay;
-    
+
     CategoryAxis xAxis = new CategoryAxis();
     NumberAxis yAxis = new NumberAxis(0, 50, 10);
     LineChart<String, Number> marksChart = new LineChart(xAxis, yAxis);
-    
+
     @FXML
     private Circle completeCircFineDay;
 
     @FXML
     private Circle completeCircFineMinute;
-    
+
     @FXML
     private Circle fineDayCircle;
 
     @FXML
     private Circle fineMinuteCircle;
-    
+
     @FXML
     private Text invalidFineMinute;
 
@@ -162,7 +161,7 @@ public class MonthlyReportController implements Initializable {
     void adminMenuMousePressedAction(MouseEvent event) {
 
     }
-    
+
     @FXML
     void finePerMinuteAction(ActionEvent event) {
         txtfieldFinePerDay.requestFocus();
@@ -176,16 +175,26 @@ public class MonthlyReportController implements Initializable {
         lateTime.setCellValueFactory(new PropertyValueFactory<>("lateTime"));
         leaveDay.setCellValueFactory(new PropertyValueFactory<>("leaveDay"));
         fees.setCellValueFactory(new PropertyValueFactory<>("fees"));
-        
+
         txtfieldFinePerMinute.setText(String.valueOf(50));
         txtfieldFinePerDay.setText(String.valueOf(3000));
 
-//        trainerMonthlyReportTable.setItems(list);
+        dateForData.setOnMouseClicked((event) -> {
 
+            
+            dateForData.valueProperty().addListener((observable, oldValue, newValue) -> {
+
+                insertPressedAction(event);
+                insertReleasedAction(event);
+
+            });
+
+        });
+
+//        trainerMonthlyReportTable.setItems(list);
 //        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMMM yyyy");
 //        LocalDateTime now = LocalDateTime.now();
 //        dateMonthlyReport.setText(dtf.format(now));
-       
         MemberSignUpController memSignUpControll = new MemberSignUpController();
         HamburgerBasicCloseTransition burgerTask = new HamburgerBasicCloseTransition(adminMenu);
         burgerTask.setRate(-1);
@@ -238,7 +247,7 @@ public class MonthlyReportController implements Initializable {
     @FXML
     void insertPressedAction(MouseEvent event) {
         if (dateForData.getValue() != null && !txtfieldFinePerMinute.getText().isEmpty() && !txtfieldFinePerDay.getText().isEmpty()) {
-            if (completeCircFineDay.getFill() == Color.RED || completeCircFineMinute.getFill() == Color.RED){
+            if (completeCircFineDay.getFill() == Color.RED || completeCircFineMinute.getFill() == Color.RED) {
                 invalidAnimation();
                 invalidControllThreads();
             }
@@ -248,7 +257,7 @@ public class MonthlyReportController implements Initializable {
             emptyControllThreads();
         }
     }
-    
+
     @FXML
     void insertReleasedAction(MouseEvent event) {
         if (dateForData.getValue() != null && !txtfieldFinePerMinute.getText().isEmpty() && !txtfieldFinePerDay.getText().isEmpty()) {
@@ -294,7 +303,7 @@ public class MonthlyReportController implements Initializable {
             emptyControllThreads();
         }
     }
-    
+
     public void fadeAnimationItems(FadeTransition fadeAnimation) {
         fadeAnimation.setDuration(Duration.millis(4000));
         fadeAnimation.setCycleCount(1);
@@ -309,12 +318,12 @@ public class MonthlyReportController implements Initializable {
         fadeAnimationItems(fadeAnimationFineDay);
         fadeAnimationItems(fadeAnimationFineMinute);
     }
-    
+
     public void invalidAnimation() {
         fadeAnimationItems(fadeAnimationInvalidFineDay);
         fadeAnimationItems(fadeAnimationInvalidFineMinute);
     }
-    
+
     public void invalidFineDayCondition() {
         if (!Pattern.matches("\\d{1,}", txtfieldFinePerDay.getText())) {
             completeCircFineDay.setFill(Color.RED);
@@ -324,7 +333,7 @@ public class MonthlyReportController implements Initializable {
             completeCircFineDay.setFill(Color.GREEN);
         }
     }
-    
+
     public void invalidFineMinuteCondition() {
         if (!Pattern.matches("\\d{1,}", txtfieldFinePerMinute.getText())) {
             completeCircFineMinute.setFill(Color.RED);
@@ -341,14 +350,14 @@ public class MonthlyReportController implements Initializable {
             fadeAnimationDate.play();
         }
     }
-    
+
     public void fineDayCondition() {
         if (txtfieldFinePerDay.getText().isEmpty()) {
             fadeAnimationFineDay.setNode(fineDayCircle);
             fadeAnimationFineDay.play();
         }
     }
-    
+
     public void fineMinuteCondition() {
         if (txtfieldFinePerMinute.getText().isEmpty()) {
             fadeAnimationFineMinute.setNode(fineMinuteCircle);
@@ -446,7 +455,7 @@ public class MonthlyReportController implements Initializable {
                         loader.setLocation(getClass().getResource("MonthlyReportPrintScene.fxml"));
                         Parent printScene = loader.load();
                         MonthlyReportPrintController controller = loader.getController();
-                        controller.addFineData(Integer.parseInt(txtfieldFinePerDay.getText()), 
+                        controller.addFineData(Integer.parseInt(txtfieldFinePerDay.getText()),
                                 Integer.parseInt(txtfieldFinePerMinute.getText()), String.valueOf(dateForData.getValue()));
                         Scene scene = new Scene(printScene);
                         scene.getStylesheets().add("CSS/TableDesign.css");
