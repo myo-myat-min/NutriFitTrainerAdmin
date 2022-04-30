@@ -28,7 +28,7 @@ public class trainer_table {
         String sql = "Create table trainer("
                 + "id varchar(50) Primary key,"
                 + "name Varchar(50) NOT NULL,"
-                + "password TEXT NOT NULL ,"
+                + "password Varchar(50) NOT NULL ,"
                 + "dob Date NOT NULL,"
                 + "gender Varchar(6) NOT NULL,"
                 + "email Varchar(50) NOT NULL Unique, "

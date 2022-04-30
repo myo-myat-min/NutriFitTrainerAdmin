@@ -12,7 +12,7 @@ public class admin_table {
 	public static void create_table() {
 
 		String sql = "create table admin(" + "id  varchar(50) primary key ," + "name varchar(50) not null,"
-				+ "password TEXT not null,"
+				+ "password varchar(50) not null,"
 				+ "email varchar(50) not null Unique, phone varchar(15) not null, status varchar(10) not null);";
 
 		try (Connection con = ConnectDB.CreateConnection(); PreparedStatement ps = con.prepareStatement(sql);) {

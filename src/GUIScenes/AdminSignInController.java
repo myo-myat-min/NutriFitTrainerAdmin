@@ -4,12 +4,12 @@ package GUIScenes;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
-import db.ConnectDB;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Base64;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -37,6 +37,9 @@ import javafx.scene.shape.SVGPath;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+
+import db.ConnectDB;
+import db.CreateDatabaseAndTables;
 
 public class AdminSignInController implements Initializable {
     
@@ -137,10 +140,16 @@ public class AdminSignInController implements Initializable {
                     try (Connection con = ConnectDB.CreateConnection();
                             PreparedStatement ps = con.prepareStatement(sql);) {
 
+                    	CreateDatabaseAndTables dbCreate = new CreateDatabaseAndTables();
                         ResultSet rs = ps.executeQuery();
 
                         while (rs.next()) {
-                            if (rs.getString("email").equals(txtFieldEmail.getText()) && rs.getString("password").equals(pass.getText())) {
+                        	
+                        	String encodedString = rs.getString("password");
+                        	String decodedString = new String(Base64.getDecoder().decode(encodedString));
+                            System.out.println(decodedString + " Decrypted Password");
+                            
+                            if (rs.getString("email").equals(txtFieldEmail.getText()) && decodedString.equals(pass.getText())) {
                                 if (rs.getString("status").equals("On Job")) {
                                     FXMLLoader loader = new FXMLLoader();
                                     loader.setLocation(getClass().getResource("SeeAndUpdateAdminDataScene.fxml"));

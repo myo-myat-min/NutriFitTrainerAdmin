@@ -1,18 +1,22 @@
 package db;
 
 import java.sql.SQLException;
+import java.util.Base64;
 import java.io.UnsupportedEncodingException;
 import java.security.InvalidKeyException;
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.NoSuchAlgorithmException;
+import java.security.PrivateKey;
 import java.security.PublicKey;
 import java.security.Signature;
 
 import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
+import javax.crypto.KeyGenerator;
 import javax.crypto.NoSuchPaddingException;
+import javax.crypto.SecretKey;
 
 public class CreateDatabaseAndTables {
 
@@ -29,63 +33,11 @@ public class CreateDatabaseAndTables {
 		admin_table.create_table();
 
 		String password = "123minmin";
-		String encryptedPass = "";
+		String encodedString = Base64.getEncoder().encodeToString(password.getBytes());
 
 		try {
-			Signature sign = Signature.getInstance("SHA256withRSA");
-		} catch (NoSuchAlgorithmException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		KeyPairGenerator keyPairGen = null;
-		try {
-			keyPairGen = KeyPairGenerator.getInstance("RSA");
-		} catch (NoSuchAlgorithmException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		keyPairGen.initialize(2048);
-		KeyPair pair = keyPairGen.generateKeyPair();
-		PublicKey publicKey = pair.getPublic();
-		Cipher cipher = null;
-		try {
-			cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
-		} catch (NoSuchAlgorithmException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (NoSuchPaddingException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		try {
-			cipher.init(Cipher.ENCRYPT_MODE, publicKey);
-		} catch (InvalidKeyException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-
-		byte[] input = password.getBytes();
-		cipher.update(input);
-		byte[] cipherText = null;
-		try {
-			cipherText = cipher.doFinal();
-		} catch (IllegalBlockSizeException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		} catch (BadPaddingException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		try {
-			encryptedPass = new String(cipherText, "UTF8");
-			System.out.println(encryptedPass);
-		} catch (UnsupportedEncodingException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-
-		try {
-			admin_table.insert_admin(new admin("Min Min", encryptedPass, "minmin123@gmail.com", "09123456789", "On Job"));
+			admin_table
+					.insert_admin(new admin("Min Min", encodedString, "minmin123@gmail.com", "09123456789", "On Job"));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -100,5 +52,4 @@ public class CreateDatabaseAndTables {
 		monthly_progress_table.create_table();
 		viewtable.createview();
 	}
-
 }

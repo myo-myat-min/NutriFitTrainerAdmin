@@ -29,7 +29,7 @@ public class Membertable {
         String sql = "CREATE TABLE Member("
                 + "id varchar(50) Primary key,"
                 + "name Varchar(50) NOT NULL,"
-                + "password TEXT NOT NULL,"
+                + "password Varchar(50) NOT NULL,"
                 + "dob Date NOT NULL,"
                 + "gender Varchar(6) NOT NULL,"
                 + "weight Int NOT NULL,"
