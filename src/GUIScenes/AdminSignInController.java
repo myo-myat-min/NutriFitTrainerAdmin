@@ -140,16 +140,15 @@ public class AdminSignInController implements Initializable {
                     try (Connection con = ConnectDB.CreateConnection();
                             PreparedStatement ps = con.prepareStatement(sql);) {
 
-                    	CreateDatabaseAndTables dbCreate = new CreateDatabaseAndTables();
                         ResultSet rs = ps.executeQuery();
 
                         while (rs.next()) {
                         	
-                        	String encodedString = rs.getString("password");
-                        	String decodedString = new String(Base64.getDecoder().decode(encodedString));
-                            System.out.println(decodedString + " Decrypted Password");
+                        	String encodedPass = rs.getString("password");
+                        	String decodedPass = new String(Base64.getDecoder().decode(encodedPass));
+                            System.out.println(decodedPass + " Decrypted Password");
                             
-                            if (rs.getString("email").equals(txtFieldEmail.getText()) && decodedString.equals(pass.getText())) {
+                            if (rs.getString("email").equals(txtFieldEmail.getText()) && decodedPass.equals(pass.getText())) {
                                 if (rs.getString("status").equals("On Job")) {
                                     FXMLLoader loader = new FXMLLoader();
                                     loader.setLocation(getClass().getResource("SeeAndUpdateAdminDataScene.fxml"));

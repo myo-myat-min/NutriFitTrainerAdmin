@@ -46,12 +46,7 @@
          </font>
       </Text>
       <Pane fx:id="lineGraphPane" layoutX="101.0" layoutY="150.0" prefHeight="403.0" prefWidth="470.0" />
-      <JFXButton fx:id="insertDataButton" buttonType="RAISED" layoutX="610.0" layoutY="169.0" onMousePressed="#insertPressedAction" onMouseReleased="#insertReleasedAction" prefHeight="31.0" prefWidth="97.0" ripplerFill="#35ae05" style="-fx-background-color: #ffbb00;" text="Insert" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="15.0" />
-         </font>
-      </JFXButton>
-      <TableView fx:id="trainerMonthlyReportTable" editable="true" layoutX="610.0" layoutY="218.0" prefHeight="350.0" prefWidth="526.0">
+      <TableView fx:id="trainerMonthlyReportTable" editable="true" layoutX="610.0" layoutY="165.0" prefHeight="403.0" prefWidth="526.0">
         <columns>
           <TableColumn fx:id="trainerName" prefWidth="164.0" text="Trainer Name" />
           <TableColumn fx:id="lateTime" prefWidth="120.0" text="Late Time(Minutes)" />

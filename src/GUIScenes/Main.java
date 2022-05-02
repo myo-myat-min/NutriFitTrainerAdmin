@@ -105,11 +105,11 @@ public class Main extends Application {
 //				CreateDatabaseAndTables create = new CreateDatabaseAndTables();
 //				create.createDBAndTables();
 //			} 
-            
+
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-		
+
 		ArrayList<String> databaseNames = new ArrayList<>();
 		CreateDatabaseAndTables createDBAndTables = new CreateDatabaseAndTables();
 		Connection con = CreateDB.createConnection();
@@ -123,7 +123,7 @@ public class Main extends Application {
 		} catch (SQLException ex) {
 			ex.printStackTrace();
 		}
-		
+
 		if (!databaseNames.contains("nutri_fit")) {
 			createDBAndTables.createDBAndTables();
 		}

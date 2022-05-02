@@ -33,11 +33,11 @@ public class CreateDatabaseAndTables {
 		admin_table.create_table();
 
 		String password = "123minmin";
-		String encodedString = Base64.getEncoder().encodeToString(password.getBytes());
+		String encodedPass = Base64.getEncoder().encodeToString(password.getBytes());
 
 		try {
 			admin_table
-					.insert_admin(new admin("Min Min", encodedString, "minmin123@gmail.com", "09123456789", "On Job"));
+					.insert_admin(new admin("Min Min", encodedPass, "minmin123@gmail.com", "09123456789", "On Job"));
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

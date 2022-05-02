@@ -15,26 +15,16 @@ import com.jfoenix.transitions.hamburger.HamburgerBasicCloseTransition;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
 import javafx.animation.FadeTransition;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.print.PageLayout;
-import javafx.print.PageOrientation;
-import javafx.print.Paper;
-import javafx.print.Printer;
-import javafx.print.PrinterJob;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.chart.CategoryAxis;
@@ -43,7 +33,6 @@ import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -118,9 +107,6 @@ public class MonthlyReportController implements Initializable {
 	private JFXDatePicker dateForData;
 
 	@FXML
-	private JFXButton insertDataButton;
-
-	@FXML
 	private Circle dateCircle;
 
 	@FXML
@@ -179,21 +165,15 @@ public class MonthlyReportController implements Initializable {
 		txtfieldFinePerMinute.setText(String.valueOf(50));
 		txtfieldFinePerDay.setText(String.valueOf(3000));
 
-		dateForData.setOnMouseClicked((event) -> {
+		dateForData.setValue(LocalDate.now());
+		addDataToTable();
 
-			dateForData.valueProperty().addListener((observable, oldValue, newValue) -> {
+		dateForData.valueProperty().addListener((observable, oldValue, newValue) -> {
 
-				insertPressedAction(event);
-				insertReleasedAction(event);
-
-			});
+			addDataToTable();
 
 		});
 
-//        trainerMonthlyReportTable.setItems(list);
-//        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MMMM yyyy");
-//        LocalDateTime now = LocalDateTime.now();
-//        dateMonthlyReport.setText(dtf.format(now));
 		MemberSignUpController memSignUpControll = new MemberSignUpController();
 		HamburgerBasicCloseTransition burgerTask = new HamburgerBasicCloseTransition(adminMenu);
 		burgerTask.setRate(-1);
@@ -217,34 +197,7 @@ public class MonthlyReportController implements Initializable {
 		});
 	}
 
-	private void lineGraph() {
-		xAxis.setLabel("Months");
-		yAxis.setLabel("Number of members");
-
-		XYChart.Series series = new XYChart.Series();
-		series.setName("New Member");
-		series.getData().add(new XYChart.Data<>("January", 0));
-		series.getData().add(new XYChart.Data<>("February", 0));
-		series.getData().add(new XYChart.Data<>("March", 0));
-		series.getData().add(new XYChart.Data<>("April", 0));
-		series.getData().add(new XYChart.Data<>("May", 0));
-		series.getData().add(new XYChart.Data<>("June", 0));
-		series.getData().add(new XYChart.Data<>("July", 0));
-		series.getData().add(new XYChart.Data<>("August", 0));
-		series.getData().add(new XYChart.Data<>("September", 0));
-		series.getData().add(new XYChart.Data<>("October", 0));
-		series.getData().add(new XYChart.Data<>("November", 0));
-		series.getData().add(new XYChart.Data<>("Decomber", 0));
-		marksChart.getData().add(series);
-		marksChart.setMaxWidth(681);
-		marksChart.setMaxHeight(403);
-		xAxis.setTickLabelFont(Font.font("Calibri", FontWeight.BOLD, FontPosture.REGULAR, 14));
-		yAxis.setTickLabelFont(Font.font("Calibri", FontWeight.BOLD, FontPosture.REGULAR, 14));
-		lineGraphPane.getChildren().add(marksChart);
-	}
-
-	@FXML
-	void insertPressedAction(MouseEvent event) {
+	public void addDataToTable() {
 		if (dateForData.getValue() != null && !txtfieldFinePerMinute.getText().isEmpty()
 				&& !txtfieldFinePerDay.getText().isEmpty()) {
 			if (completeCircFineDay.getFill() == Color.RED || completeCircFineMinute.getFill() == Color.RED) {
@@ -256,12 +209,11 @@ public class MonthlyReportController implements Initializable {
 			emptyNotiMethod();
 			emptyControllThreads();
 		}
-	}
 
-	@FXML
-	void insertReleasedAction(MouseEvent event) {
 		if (dateForData.getValue() != null && !txtfieldFinePerMinute.getText().isEmpty()
 				&& !txtfieldFinePerDay.getText().isEmpty()) {
+			System.out.println(completeCircFineDay.getFill());
+			System.out.println(completeCircFineMinute.getFill());
 			if (completeCircFineDay.getFill() == Color.GREEN && completeCircFineMinute.getFill() == Color.GREEN) {
 
 				marksChart.getData().remove(this);
@@ -302,8 +254,7 @@ public class MonthlyReportController implements Initializable {
 				dateMonthlyReport.setText(
 						String.format("%s %s", dateForData.getValue().getMonth(), dateForData.getValue().getYear()));
 				numberOfNewMember.setText("New Member : " + db.Membertable.new_member(month, year, end_day));
-				System.out.println(txtfieldFinePerMinute.getText() + " fine per minute");
-				System.out.println(txtfieldFinePerDay.getText() + " fine per day");
+
 				ArrayList<db.MonthlyReportTrainer> m = db.DailyAttendancetable.showAllTrainerMonthlyAtt(
 						dateForData.getValue(), Integer.parseInt(txtfieldFinePerMinute.getText()),
 						Integer.parseInt(txtfieldFinePerDay.getText()));
@@ -317,6 +268,32 @@ public class MonthlyReportController implements Initializable {
 			emptyNotiMethod();
 			emptyControllThreads();
 		}
+	}
+
+	private void lineGraph() {
+		xAxis.setLabel("Months");
+		yAxis.setLabel("Number of members");
+
+		XYChart.Series series = new XYChart.Series();
+		series.setName("New Member");
+		series.getData().add(new XYChart.Data<>("January", 0));
+		series.getData().add(new XYChart.Data<>("February", 0));
+		series.getData().add(new XYChart.Data<>("March", 0));
+		series.getData().add(new XYChart.Data<>("April", 0));
+		series.getData().add(new XYChart.Data<>("May", 0));
+		series.getData().add(new XYChart.Data<>("June", 0));
+		series.getData().add(new XYChart.Data<>("July", 0));
+		series.getData().add(new XYChart.Data<>("August", 0));
+		series.getData().add(new XYChart.Data<>("September", 0));
+		series.getData().add(new XYChart.Data<>("October", 0));
+		series.getData().add(new XYChart.Data<>("November", 0));
+		series.getData().add(new XYChart.Data<>("Decomber", 0));
+		marksChart.getData().add(series);
+		marksChart.setMaxWidth(681);
+		marksChart.setMaxHeight(403);
+		xAxis.setTickLabelFont(Font.font("Calibri", FontWeight.BOLD, FontPosture.REGULAR, 14));
+		yAxis.setTickLabelFont(Font.font("Calibri", FontWeight.BOLD, FontPosture.REGULAR, 14));
+		lineGraphPane.getChildren().add(marksChart);
 	}
 
 	public void fadeAnimationItems(FadeTransition fadeAnimation) {
