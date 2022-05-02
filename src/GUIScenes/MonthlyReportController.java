@@ -198,6 +198,7 @@ public class MonthlyReportController implements Initializable {
 	}
 
 	public void addDataToTable() {
+		trainerMonthlyReportTable.getItems().clear();
 		if (dateForData.getValue() != null && !txtfieldFinePerMinute.getText().isEmpty()
 				&& !txtfieldFinePerDay.getText().isEmpty()) {
 			if (completeCircFineDay.getFill() == Color.RED || completeCircFineMinute.getFill() == Color.RED) {
@@ -480,10 +481,5 @@ public class MonthlyReportController implements Initializable {
 		}
 
 	}
-
-	@FXML
-	void clearPressedAction(MouseEvent event) {
-		trainerMonthlyReportTable.getItems().clear();
-	}
-
+	
 }
