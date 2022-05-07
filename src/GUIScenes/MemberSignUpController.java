@@ -286,6 +286,7 @@ public class MemberSignUpController implements Initializable {
 				}
 				TrainerSignInController trainerSignInControl = new TrainerSignInController();
 				String password = randomAlphaNumeric(11);
+				System.out.println(password + " PASSWORD");
 				String encodedPass = Base64.getEncoder().encodeToString(password.getBytes());
 
 				Member m = new Member(memberName.getText(), encodedPass, dob.getValue(), maleOrFemale,

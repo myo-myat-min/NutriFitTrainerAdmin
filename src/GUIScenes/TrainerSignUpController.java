@@ -19,6 +19,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDate;
+import java.util.Base64;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -218,9 +219,11 @@ public class TrainerSignUpController extends Stage implements Initializable {
                 }
                 MemberSignUpController memberSignUpControl = new MemberSignUpController();
                 String password = memberSignUpControl.randomAlphaNumeric(11);
+                String encodedPass = Base64.getEncoder().encodeToString(password.getBytes());
+                
                 db.trainer_table trainerTable = new db.trainer_table();
                 try {
-                    trainerTable.insert_trainer(new db.trainer(trainerName.getText(), password, dob.getValue(), maleOrFemale, email.getText(),
+                    trainerTable.insert_trainer(new db.trainer(trainerName.getText(), encodedPass, dob.getValue(), maleOrFemale, email.getText(),
                             nrc.getText(), phone.getText(), address.getText(), status, Integer.parseInt(fees.getText())));
 
                     TrainerSignInController trainerSignInControl = new TrainerSignInController();
