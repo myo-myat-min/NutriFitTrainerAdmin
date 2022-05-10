@@ -98,7 +98,7 @@
             <Font size="15.0" />
          </font>
       </Text>
-      <Text fx:id="wrongName" fill="RED" layoutX="986.0" layoutY="196.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid name" textAlignment="CENTER" wrappingWidth="68.99999535083771">
+      <Text fx:id="wrongName" fill="RED" layoutX="986.0" layoutY="196.0" opacity="0.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invalid email" textAlignment="CENTER" wrappingWidth="68.99999535083771">
          <font>
             <Font name="System Bold" size="11.0" />
          </font>
