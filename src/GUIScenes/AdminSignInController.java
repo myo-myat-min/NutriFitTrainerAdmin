@@ -168,10 +168,11 @@ public class AdminSignInController implements Initializable {
 							String decodedPass = new String(Base64.getDecoder().decode(encodedPass));
 							System.out.println(decodedPass + " Decrypted Password");
 
-							if (rs.getString("email").equals(txtFieldEmail.getText()) && decodedPass.equals(pass.getText())) {
-								
+							if (rs.getString("email").equals(txtFieldEmail.getText())
+									&& decodedPass.equals(pass.getText())) {
+
 								if (rs.getString("status").equals("On Job")) {
-									
+
 									FXMLLoader loader = new FXMLLoader();
 									loader.setLocation(getClass().getResource("SeeAndUpdateAdminDataScene.fxml"));
 									Parent trainerMyAccountScene = loader.load();
