@@ -87,7 +87,7 @@
             <Font size="18.0" />
          </font>
       </Text>
-      <Text layoutX="713.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by " textAlignment="CENTER" wrappingWidth="370.088404327631">
+      <Text layoutX="713.0" layoutY="643.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Developed by MSTZ-SN" textAlignment="CENTER" wrappingWidth="370.088404327631">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
