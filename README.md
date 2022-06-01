@@ -1,4 +1,12 @@
 # NutriFitTrainerAdmin
 Gym Management System (College Project)
 
-Admin Data Test
+![](/src/ScenesSnapshot/TrainerAdminSignInScene.png)
+
+![](/src/ScenesSnapshot/AdminSignInScene.png)
+
+![](/src/ScenesSnapshot/AdminSignInSceneWithEmptyError.png)
+
+![](/src/ScenesSnapshot/AdminSignInSceneWithInvalidError.png)
+
+![](/src/ScenesSnapshot/SeeAndUpdateAdminDataScene.png)
