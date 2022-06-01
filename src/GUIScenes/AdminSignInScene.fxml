@@ -87,8 +87,8 @@
             <Font name="System Bold" size="21.0" />
          </font>
       </Text>
-      <Circle fx:id="passCircle" fill="RED" layoutX="1025.0" layoutY="302.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
-      <Text fill="WHITE" layoutX="1019.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
+      <Circle fx:id="passCircle" fill="RED" layoutX="1031.0" layoutY="302.0" opacity="0.0" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="1025.0" layoutY="308.0" strokeType="OUTSIDE" strokeWidth="0.0" text="x" wrappingWidth="11.59716796875">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
