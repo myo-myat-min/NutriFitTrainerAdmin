@@ -11,4 +11,8 @@ Gym Management System (College Project)
 
 ![](/src/ScenesSnapshot/SeeAndUpdateAdminDataScene.png)
 
+![](/src/ScenesSnapshot/Menu.png)
+
+![](/src/ScenesSnapshot/AdminSignUpScene.png)
+
 Continued...
