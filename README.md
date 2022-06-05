@@ -23,4 +23,6 @@ Gym Management System (College Project)
 
 ![](/src/ScenesSnapshot/MemberSignUp.png)
 
+![](/src/ScenesSnapshot/MemberSignUpWithEmptyError.png)
+
 Continued...
